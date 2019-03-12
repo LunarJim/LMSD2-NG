@@ -15,7 +15,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand mr-5 " href="#">
             <h1 class="logo">
-              <span class="logo-name text-white">LMSD</span><i class="fas fa-hand-spock text-white"></i>
+              <span class="logo-name text-white mb-0">LMSD</span><i class="fas fa-hand-spock text-white"></i>
             </h1>
           </a>
           <ul class="navbar-nav">
@@ -35,18 +35,12 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-        
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-
-            
             <a class="btn btn-primary btn-submit mr-5" href="#" role="button"><span class="">Ta vision du monde ici !</span></a>
             <form class="form-inline my-2 my-lg-0 mr-5 ">
               <input class="form-control mr-sm-2 d-none d-sm-block" type="search" placeholder="Search" aria-label="Search">
             </form>
-            
             <a href=""> <button type="button" class="btn btn-warning ">Connexion/inscription</button></a>
-            
           </div>
         </nav>
     

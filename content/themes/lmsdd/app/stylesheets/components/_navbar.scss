@@ -1,8 +1,13 @@
-.show {
-    background-color: black;
+.navbar-collapse.show {
+    
     padding-bottom: 0.5em;
+    padding-top: 0.3em;
     display: flex;
     flex-direction: column;
+    background-color: lightsteelblue;
+    opacity: 0.9;
+    border-radius: 15%;
+
     
     .btn-warning{
         margin-left: -3em;
