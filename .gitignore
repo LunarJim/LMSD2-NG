@@ -1,4 +1,7 @@
 wp-config.php
 vendor/
 wp/
-content/
+/content/*
+!/content/themes
+/content/themes/*
+!/content/themes/lmsdd

@@ -10,6 +10,14 @@
         "johnpbloch/wordpress": "^5.0",
         "wpackagist-theme/twentynineteen": "*"
     },
+
+    "require-dev": {
+        "wpackagist-plugin/what-the-file": "*",
+        "wpackagist-plugin/simply-show-hooks": "*",
+        "wpackagist-plugin/advanced-custom-fields": "*",
+        "wpackagist-plugin/contact-form-7": "*"
+        
+    },
     "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
