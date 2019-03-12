@@ -1,13 +1,14 @@
 html {
-    height: 100%;
+    
     box-sizing: border-box;
+    
   }
     
     body {
     font-family: 'Acme', sans-serif;
-    min-height: 78%;
+    min-height: 95%;
     margin: 0;
-    padding-bottom: 7em;
+    padding-bottom: 7.4em;
     position: relative;
     background-image:
     radial-gradient(
@@ -20,6 +21,6 @@ html {
 
   @media (max-width: 991px) {
     body {
-      padding-top : 7em;
+      padding-top : 4em;
     }
   }

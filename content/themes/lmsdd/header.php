@@ -18,15 +18,9 @@
               <span class="logo-name text-white">LMSD</span><i class="fas fa-hand-spock text-white"></i>
             </h1>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-
-            <ul class="navbar-nav mr-5">
+          <ul class="navbar-nav">
               
-              <li class="nav-item active dropdown pl-4">
+              <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle text-uppercase text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Catégories
                 </a>
@@ -38,12 +32,20 @@
                 </div>
               </li>
             </ul>
-            <a class="btn btn-primary btn-submit mr-4" href="#" role="button"><span class="">Ta vision du monde ici !</span></a>
-            <form class="form-inline my-2 my-lg-0 mr-4 ml-4">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+        
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+            
+            <a class="btn btn-primary btn-submit mr-5" href="#" role="button"><span class="">Ta vision du monde ici !</span></a>
+            <form class="form-inline my-2 my-lg-0 mr-5 ">
+              <input class="form-control mr-sm-2 d-none d-sm-block" type="search" placeholder="Search" aria-label="Search">
             </form>
             
-            <a href=""> <button type="button" class="btn btn-warning ml-4">Connexion/inscription</button></a>
+            <a href=""> <button type="button" class="btn btn-warning ">Connexion/inscription</button></a>
             
           </div>
         </nav>
