@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+    
+    body {
+    font-family: 'Acme', sans-serif;
+    min-height: 78%;
+    margin: 0;
+    padding-bottom: 7em;
+    position: relative;
+    background-image:
+    radial-gradient(
+      circle at top right,
+      #2b46f2,
+      #ed0909
+    );
+    
+  }
+
+  @media (max-width: 991px) {
+    body {
+      padding-top : 7em;
+    }
+  }
