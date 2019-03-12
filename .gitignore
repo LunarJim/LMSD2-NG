@@ -3,3 +3,10 @@ notes/
 wp-config.php
 vendor/
 wp/
+/content/*
+!/content/themes
+/content/themes/*
+!/content/themes/lmsdd
+!/content/plugins/
+/content/plugins/*
+!/content/plugins/lmsdd-settings
