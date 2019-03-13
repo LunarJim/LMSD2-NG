@@ -18,8 +18,7 @@
               <span class="logo-name text-white mb-0">LMSD</span><i class="fas fa-hand-spock text-white"></i>
             </h1>
           </a>
-          <ul class="navbar-nav">
-              
+          <ul class="navbar-nav ml-5">
               <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle text-uppercase text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Catégories
