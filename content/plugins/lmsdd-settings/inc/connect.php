@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 function connect() {
 
     if (!empty($_POST['User_name']) && !empty($_POST['InputPassword_has_account'])) {
@@ -25,9 +28,30 @@ function connect() {
         }
         else {
 
-        echo "noooOOpe";
+            $_SESSION['message'] = 'Login ou mot de passe incorrect';
         }
     }
+
 }
 
 add_action('init', 'connect');
+
+function displayMessages() {
+
+    //Si j'ai un message à afficher...
+    if (!empty($_SESSION['message'])) {
+
+    // Alors je l'affiche
+    echo 'app.errorsMsg.push("'.$_SESSION['message'].'");';
+
+    // PUIS, comme il vient d'être affiché, je le supprime
+    $_SESSION['message'] = [];
+
+    // ... ainsi mon message ne sera plus affiché
+    }
+}
+
+add_action('init', 'displayMessages');
+
+
+

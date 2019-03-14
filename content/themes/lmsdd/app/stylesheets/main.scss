@@ -7,7 +7,9 @@
 
 @import 'components/post',
         'components/navbar',
-        'components/button';
+        'components/errorMessages',
+        'components/button',
+        'components/reveal';
 
 @import 'layout/front-page',
         'layout/footer';
