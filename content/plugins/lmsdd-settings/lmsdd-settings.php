@@ -10,6 +10,7 @@ Version: 1.0.0
 if (!defined('WPINC')) {die();}
 
 require plugin_dir_path(__FILE__) . 'inc/quote_cpt.php';
+require plugin_dir_path(__FILE__) . 'inc/connect.php';
 /* 
 require plugin_dir_path(__FILE__) . 'inc/roles.php';
 require plugin_dir_path(__FILE__) . 'inc/settings.php';

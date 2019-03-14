@@ -13,7 +13,7 @@
 <body>
   <header class="container-fluid p-0 fixed-top">
       <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand mr-5 " href="#">
+          <a class="navbar-brand mr-5 " href="<?= get_home_url() ?>">
             <h1 class="logo">
               <span class="logo-name text-white mb-0">LMSD</span><i class="fas fa-hand-spock text-white"></i>
             </h1>
@@ -39,7 +39,15 @@
             <form class="form-inline my-2 my-lg-0 mr-5 ">
               <input class="form-control mr-sm-2 d-none d-sm-block" type="search" placeholder="Search" aria-label="Search">
             </form>
-            <a href=""> <button type="button" class="btn btn-warning ">Connexion/inscription</button></a>
+
+
+
+            <?php if(is_user_logged_in()):?>
+            <?php $current_user = wp_get_current_user(); ?>
+            <a href=""> <button type="button" class="btn btn-warning ">Hello <?=$current_user->user_nicename?> !</button></a>
+            <?php else: ?>
+            <a href="<?= get_page_link(11); ?>"> <button type="button" class="btn btn-warning ">Connexion/inscription</button></a>
+            <?php endif; ?>
           </div>
         </nav>
     
