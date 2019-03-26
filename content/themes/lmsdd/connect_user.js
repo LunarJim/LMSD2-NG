@@ -1,29 +1,29 @@
 var appRegister = {
 
-    // Je créé une clé sous forme d'un tableau qui va contenir mes elements
+    // Je créé une clé sous forme d'un tableau qui va contenir mes elementsNa
     elementsNa: [],
   
     // Je créé une clé sous forme d'un tableau qui va contenir mes messages d'erreurs
     errorsMsgNa: [],
   
-    initNA: function() {
+    initNa: function() {
   
         // Me permet de vérifier que mon code est bien executé
         console.log('appRegister.init');
   
         // Je cible mon element qui va contenir mes messages d'erreurs
-        appRegister.elements.errorsArea = document.getElementById('errors-na');
+        appRegister.elementsNa.errorsArea = document.getElementById('errors-na');
   
         // Je cible mon element "form"
-        appRegister.elements.loginForm = document.getElementById('register-form');
+        appRegister.elementsNa.registerForm = document.getElementById('register-form');
   
         // Je cible mes inputs
-        appRegister.elements.fields = document.querySelectorAll('.field-input-na');
+        appRegister.elementsNa.fields = document.querySelectorAll('.field-input-na');
   
         // Je cible l'oeil
-        appRegister.elements.reveal = document.getElementById('reveal-na');
+        // appRegister.elementsNa.reveal = document.getElementById('reveal-na');
   
-        // J'execute la méthode qui va déployer les addEventListener sur mes elements
+        // J'execute la méthode qui va déployer les addEventListener sur mes elementsNa
         appRegister.createListeners();
   
         // Si jamais j'ai déjà des messages d'erreurs, je les affiche
@@ -34,15 +34,15 @@ var appRegister = {
     createListeners: function() {
   
         // Sur mon formulaire, à la soumission, je vérifierai mes champs
-        appRegister.elements.loginForm.addEventListener('submit', appRegister.handleFormSubmit);
+        appRegister.elementsNa.registerForm.addEventListener('submit', appRegister.handleFormSubmit);
   
         // Je vais boucler sur mon tableau de fields
-        for (var index in appRegister.elements.fields) {
+        for (var index in appRegister.elementsNa.fields) {
             // index est la variable qui va contenir l'index de mes champs
             // 0, 1, ...
   
             // Je créé une variable field et je lui assigne l'element actuellement parcouru dans ma boucle
-            var field = appRegister.elements.fields[index];
+            var field = appRegister.elementsNa.fields[index];
   
             // Comme je fais un for ... in sur mon tableau de type "node-list"
             // (fourni par mon querySelectorAll)
@@ -50,13 +50,13 @@ var appRegister = {
             // du coup je vérifie que mon field est bien un objet avant de lui ajouter l'écouteur
             if (typeof field === 'object') {
   
-                // Je peux ainsi ajouter mon écouteur sur tous les elements ayant la classe "field-input"
+                // Je peux ainsi ajouter mon écouteur sur tous les elementsNa ayant la classe "field-input"
                 // ceux-ci ayant été "stockés" dans un tableau
                 field.addEventListener('blur', appRegister.handleFieldBlur);
             }
         }
   
-        appRegister.elements.reveal.addEventListener('click', appRegister.handleRevealClick);
+       // appRegister.elementsNa.reveal.addEventListener('click', appRegister.handleRevealClick);
     },
   
     // Fonction executée par mon addEventListener sur mon form a l'evenement submit
@@ -65,21 +65,21 @@ var appRegister = {
   
   
         // Je nettoie les messages d'erreurs
-        appRegister.errorsMsg = [];
+        appRegister.errorsMsgNa = [];
   
         // Je viens boucler autant de fois que j'ai d'éléments dans mon
         // tableau de champs input "fields".
-        // La clé length contient le nombre d'elements dans mon tableau "fields"
-        for (var index = 0; index < appRegister.elements.fields.length; index++) {
+        // La clé length contient le nombre d'elementsNa dans mon tableau "fields"
+        for (var index = 0; index < appRegister.elementsNa.fields.length; index++) {
   
-            var field = appRegister.elements.fields[index];
+            var field = appRegister.elementsNa.fields[index];
   
             // On vérifie tous nos champs
             appRegister.checkField(field);
         }
   
         // Si on a des messages d'erreurs à afficher...
-        if (appRegister.errorsMsg.length > 0) {
+        if (appRegister.errorsMsgNa.length > 0) {
   
             // Si j'ai des messages d'erreurs à afficher, alors:
   
@@ -111,7 +111,7 @@ var appRegister = {
         if (field.value.length < 4) {
   
             // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
-            appRegister.errorsMsg.push('Le champ '+ field.placeholder +' doit contenir au moins 4 caractères');
+            appRegister.errorsMsgNa.push('Le champ '+ field.placeholder +' doit contenir au moins 4 caractères');
   
             // J'ajoute une classe d'erreur
             field.classList.add('invalid');
@@ -129,12 +129,12 @@ var appRegister = {
         // Je prend l'element qui contient les messages d'erreurs
         // et je vide son innerHTML
         // cela me permet de supprimer a la fois le texte et les div
-        appRegister.elements.errorsArea.innerHTML = '';
+        appRegister.elementsNa.errorsArea.innerHTML = '';
   
-        for (var index in appRegister.errorsMsg) {
+        for (var index in appRegister.errorsMsgNa) {
   
-            appRegister.generateErrorBox(appRegister.errorsMsg[index]);
-            // console.log(appRegister.errorsMsg[index]);
+            appRegister.generateErrorBox(appRegister.errorsMsgNa[index]);
+            // console.log(appRegister.errorsMsgNa[index]);
         }
     },
   
@@ -142,7 +142,7 @@ var appRegister = {
   
         // Méthode simple pour ajouter un element dans mon DOM
         // l'inconvénient est qu'on doit concatener...
-        // appRegister.elements.errorsArea.innerHTML += '<div class="error">'+text+'<div>';
+        // appRegister.elementsNa.errorsArea.innerHTML += '<div class="error">'+text+'<div>';
   
         // Je créé un nouvel element du DOM
         var errorBox = document.createElement('div');
@@ -154,7 +154,7 @@ var appRegister = {
   
         // Je place l'element dans le DOM (et donc dans la page)
         // appRegisterendChild me permet de dire: "je t'ajouter un nouvel element enfant"
-        appRegister.elements.errorsArea.appRegisterendChild(errorBox);
+        appRegister.elementsNa.errorsArea.appendChild(errorBox);
     },
   
     handleRevealClick: function() {
@@ -181,4 +181,4 @@ var appRegister = {
   // Je prends mon document et je lui ajoute un écouteur d'évenement
   // ainsi lorsque le document aura fini de construire le DOM
   // il executera ma méthode 'init' de mon objet 'appRegister'
-  document.addEventListener('DOMContentLoaded', appRegister.init);
+  document.addEventListener('DOMContentLoaded', appRegister.initNa);
