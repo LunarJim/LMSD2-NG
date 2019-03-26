@@ -34,3 +34,13 @@ $role = new oCookingRole();
 
 register_activation_hook(__FILE__, [$role, 'activation']);
 register_deactivation_hook(__FILE__, [$role, 'deactivation']);
+
+*/
+
+add_action('after_setup_theme', 'remove_admin_bar');
+ 
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}

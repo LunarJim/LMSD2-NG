@@ -17,7 +17,7 @@ Template Post Type: page
 
         <div class="alert alert-danger" id="errors" role="alert">
           
-        </div id=login>
+        </div id="login">
           <form action="" method="post" id="login-form">
               <div class="form-group field">
                 <label for="login_has_account">login</label>
@@ -37,16 +37,18 @@ Template Post Type: page
               </div>
               <button type="submit" id="login-submit" class="btn btn-primary">Connexion</button>
             </form>
+            <br>
+            <div><a href="">mot de passe oublié ?</a></div>
       </div>
 
       <!-- Formulaire d'inscription -->
 
       <div class="col-md-6 register-form">
         <h4 class="mb-4">Pas encore de compte ?</h4>
-        <div class="alert alert-danger" id="errors" role="alert">
-          messages d'erreur ici
+        <div class="alert alert-danger" id="errors-na" role="alert">
+          
         </div>
-          <form>
+          <form action="" method="post" id="register-form">
               <div class="form-group">
                   <label for="pseudo">Pseudo</label>
                   <input type="text" class="form-control" id="pseudo_no_account" aria-describedby="pseudoHelp" placeholder="Pseudo" name="pseudo_no_account">
@@ -57,13 +59,13 @@ Template Post Type: page
                 
               </div>
               <div class="form-group">
-                <label for="inputPassword_no_account">Mot de passe</label>
-                <input type="password" class="form-control" id="InputPassword_no_account" placeholder="Mot de passe" name="InputPassword_no_account">
+                <label for="password_no_account">Mot de passe</label>
+                <input type="password" class="form-control" id="password_no_account" placeholder="Mot de passe" name="password_no_account">
                 <small id="emailHelp" class="form-text text-muted">Votre mot de passe doit contenir au moins 6 caractères</small>
               </div>
               <div class="form-group">
-                  <label for="inputPassword2_no_account">Mot de passe (vérification)</label>
-                  <input type="password" class="form-control" id="InputPassword2_no_account" placeholder="Mot de passe" name="InputPassword2_no_account">
+                  <label for="password2_no_account">Mot de passe (vérification)</label>
+                  <input type="password" class="form-control" id="password2_no_account" placeholder="Mot de passe" name="password2_no_account">
                 </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
