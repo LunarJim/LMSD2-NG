@@ -40,7 +40,17 @@ add_action('init', 'connect');
 
 function create_new_user() {
 
-    if (!empty($_POST['pseudo_no_account']) && !empty($_POST['email_no_account']) && !empty($_POST['password_no_account']) && ($_POST['password_no_account']==$_POST['password2_no_account'])) {
+    
+
+    if (!empty($_POST['pseudo_no_account']) && !empty($_POST['email_no_account']) && !empty($_POST['password_no_account']) && !empty($_POST['password2_no_account'])) {
+
+        if ($_POST['password_no_account']!=$_POST['password2_no_account']) {
+            $_SESSION['message'] = 'Les 2 mots de passes saisis sont différents !';  
+        }
+
+        else {
+
+        
 
         $create_login=$_POST['pseudo_no_account'];
         $create_password=$_POST['password_no_account'];
@@ -57,7 +67,9 @@ function create_new_user() {
 	        // Envoie un mail de notification au nouvel utilisateur
 	        wp_new_user_notification( $user_id );
 	    } else {
-	    }
+            $_SESSION['message'] = 'Ce compte existe déjà !';
+        }
+        
 
 		// Connecter automatiquement le nouvel utilisateur
 	    $creds = array();
@@ -68,6 +80,8 @@ function create_new_user() {
 
 		// Redirection
         wp_redirect(get_home_url()); exit;
+
+    }
         
     }
 	

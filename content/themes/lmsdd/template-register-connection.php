@@ -51,21 +51,21 @@ Template Post Type: page
           <form action="" method="post" id="register-form">
               <div class="form-group">
                   <label for="pseudo">Pseudo</label>
-                  <input type="text" class="form-control" id="pseudo_no_account" aria-describedby="pseudoHelp" placeholder="Pseudo" name="pseudo_no_account">
+                  <input type="text" class="form-control field-input-na" id="pseudo_no_account" aria-describedby="pseudoHelp" placeholder="Pseudo" name="pseudo_no_account">
                 </div>
               <div class="form-group">
                 <label for="email_no_account">Email</label>
-                <input type="email" class="form-control" id="email_no_account" aria-describedby="emailHelp" placeholder="Email" name="email_no_account">
+                <input type="email" class="form-control field-input-na" id="email_no_account" aria-describedby="emailHelp" placeholder="Email" name="email_no_account">
                 
               </div>
               <div class="form-group">
                 <label for="password_no_account">Mot de passe</label>
-                <input type="password" class="form-control" id="password_no_account" placeholder="Mot de passe" name="password_no_account">
+                <input type="password" class="form-control field-input-na" id="password_no_account" placeholder="Mot de passe" name="password_no_account">
                 <small id="emailHelp" class="form-text text-muted">Votre mot de passe doit contenir au moins 6 caractères</small>
               </div>
               <div class="form-group">
                   <label for="password2_no_account">Mot de passe (vérification)</label>
-                  <input type="password" class="form-control" id="password2_no_account" placeholder="Mot de passe" name="password2_no_account">
+                  <input type="password" class="form-control field-input-na" id="password2_no_account" placeholder="Mot de passe" name="password2_no_account">
                 </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -90,6 +90,29 @@ if (!empty($_SESSION['message'])) {
 
     // Alors je l'affiche
     echo 'app.errorsMsg.push("'.$_SESSION['message'].'");';
+
+    // PUIS, comme il vient d'être affiché, je le supprime
+    $_SESSION['message'] = [];
+
+    // ... ainsi mon message ne sera plus affiché
+}
+
+?>
+
+// script js création de compte 
+
+</script>
+
+<script src="<?= get_theme_file_uri('connect_user.js')?>"></script>
+
+<script>
+<?php
+
+// Si j'ai un message à afficher...
+if (!empty($_SESSION['message'])) {
+
+    // Alors je l'affiche
+    echo 'appRegister.errorsMsgNa.push("'.$_SESSION['message'].'");';
 
     // PUIS, comme il vient d'être affiché, je le supprime
     $_SESSION['message'] = [];
