@@ -36,6 +36,7 @@ function connect() {
 
 add_action('init', 'connect');
 
+/*
 function displayMessages() {
 
     //Si j'ai un message à afficher...
@@ -52,6 +53,7 @@ function displayMessages() {
 }
 
 add_action('init', 'displayMessages');
+*/
 
 
 

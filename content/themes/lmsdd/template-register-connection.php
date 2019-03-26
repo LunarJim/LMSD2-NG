@@ -78,6 +78,26 @@ Template Post Type: page
 
   </div>
 
+<script src="<?= get_theme_file_uri('connect.js')?>"></script>
+
+<script>
+<?php
+
+// Si j'ai un message à afficher...
+if (!empty($_SESSION['message'])) {
+
+    // Alors je l'affiche
+    echo 'app.errorsMsg.push("'.$_SESSION['message'].'");';
+
+    // PUIS, comme il vient d'être affiché, je le supprime
+    $_SESSION['message'] = [];
+
+    // ... ainsi mon message ne sera plus affiché
+}
+
+?>
+</script>
+
 <?php get_footer(); ?>
 
 
