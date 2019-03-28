@@ -30,7 +30,7 @@ $category = get_queried_object();
 
             foreach ($terms as $term):  ?>
 
-            <a href="<?=get_term_link($term); ?>"> <button type="button" class="btn btn-secondary mb-1 mr-1 pl-1 pr-1"><?= $term->name; ?></button></a>
+            <a href="<?=get_term_link($term); ?>"> <button type="button" class="btn btn-secondary mb-1 mr-1 pl-1 pr-1 pt-0 pb-0"><?= $term->name; ?></button></a>
 
             <?php endforeach; endif; ?>
             

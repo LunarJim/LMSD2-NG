@@ -1,5 +1,9 @@
 <?php get_header();?>
 
+
+
+<div class="main container posts">
+
 <h2 class="text-center pt-1">
 
 <?php 
@@ -7,7 +11,7 @@ $count = $wp_query->found_posts;
 $several = ($count<=1) ? '' : 's';
 
 if ($count>0) : $output =  $count.' résultat'.$several.' pour la recherche';
-else : $output = 'Aucun résultat pour la recherche';
+else : $output = 'Aucun résultat trouvé pour la recherche';
 endif;
 
 $output .= ' "<span class="terms_search">'. get_search_query() .'</span>"';
@@ -24,8 +28,6 @@ else:
 ?>
 
 <?php endif; ?>
-
-<div class="main container posts">
   <div class="row mb-4 pb-3">
 
 
@@ -53,7 +55,7 @@ else:
 
             foreach ($terms as $term):  ?>
 
-            <a href="<?=get_term_link($term); ?>"> <button type="button" class="btn btn-secondary mb-1 mr-1 pl-1 pr-1"><?= $term->name; ?></button></a>
+            <a href="<?=get_term_link($term); ?>"> <button type="button" class=" pt-0 pb-0 btn btn-secondary mb-1 mr-1 pl-1 pr-1"><?= $term->name; ?></button></a>
 
             <?php endforeach; endif; ?>
             
