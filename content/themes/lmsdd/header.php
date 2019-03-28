@@ -38,7 +38,9 @@
 
                 <?php endforeach; endif; ?>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item text-success" href="#">Top 10</a>
+                  <a class="dropdown-item text-success" href="#">Random</a>
+                  <a class="dropdown-item text-success" href="#">Le choix du patron</a>
                 </div>
               </li>
             </ul>
