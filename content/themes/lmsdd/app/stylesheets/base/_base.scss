@@ -1,15 +1,15 @@
 html {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 3em;
     
-    box-sizing: border-box;
     
   }
     
     body {
     font-family: 'Acme', sans-serif;
-    min-height: 95%;
     margin: 0;
-    padding-bottom: 7.4em;
-    position: relative;
+  
     background-image:
     radial-gradient(
       circle at top right,
