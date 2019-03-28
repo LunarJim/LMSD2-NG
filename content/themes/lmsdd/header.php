@@ -50,7 +50,7 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <a class="btn btn-primary btn-submit mr-5" href="#" role="button"><span class="">Ta vision du monde ici !</span></a>
             <form class="form-inline my-2 my-lg-0 mr-5 ">
-              <input class="form-control mr-sm-2 d-none d-sm-block" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2 d-none d-sm-block" value="<?php the_search_query(); ?>" type="search" placeholder="Recherche ?" aria-label="Search" name="s">
             </form>
 
 
