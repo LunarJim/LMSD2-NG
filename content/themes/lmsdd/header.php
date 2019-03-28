@@ -24,8 +24,19 @@
                   Catégories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
+
+                <?php $categories = $terms = get_Terms(array(
+                  'taxonomy' => 'categorie',
+                  'hide_empty' => false,
+                ));
+
+                if(is_array($categories)):
+
+                foreach ($categories as $category): ?>
+
+                  <a class="dropdown-item" href="<?php echo get_term_link($category); ?>"><?= $category->name; ?></a>
+
+                <?php endforeach; endif; ?>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
