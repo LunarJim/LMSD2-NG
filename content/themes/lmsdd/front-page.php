@@ -11,7 +11,7 @@
 
   $args = [
     'post_type'  => 'quote',
-    'posts_per_page' => 6,
+    'posts_per_page' => 9,
   ];
 
   $quotes = new WP_Query($args);
