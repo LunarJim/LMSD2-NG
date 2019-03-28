@@ -148,7 +148,7 @@ var appRegister = {
         var errorBox = document.createElement('div');
   
         // J'assigne une class à mon element
-        errorBox.className = 'error';
+        errorBox.className = 'error alert alert-danger';
         // J'assign un texte à mon element
         errorBox.textContent = text;
   

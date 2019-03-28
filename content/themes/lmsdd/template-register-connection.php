@@ -15,7 +15,7 @@ Template Post Type: page
 
         <!-- affichage des messages d'erreur -->
 
-        <div class="alert alert-danger" id="errors" role="alert">
+        <div class="" id="errors" role="alert">
           
         </div id="login">
           <form action="" method="post" id="login-form">
@@ -45,7 +45,7 @@ Template Post Type: page
 
       <div class="col-md-6 register-form">
         <h4 class="mb-4">Pas encore de compte ?</h4>
-        <div class="alert alert-danger" id="errors-na" role="alert">
+        <div class="" id="errors-na" role="alert">
           
         </div>
           <form action="" method="post" id="register-form">

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.1.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-03-06 05:56:35+0000\n"
+"PO-Revision-Date: 2019-03-14 13:16:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +24,7 @@ msgstr "1"
 
 #: wp-admin/about.php:146
 msgid "Miscellaneous improvements include updates to values for the <code>WP_DEBUG_LOG</code> constant, new test config file constant in the test suite, new plugin action hooks, short-circuit filters for <code>wp_unique_post_slug()</code> and <code>WP_User_Query</code> and <code>count_users()</code>, a new <code>human_readable_duration</code> function, improved taxonomy metabox sanitization, limited <code>LIKE</code> support for meta keys when using <code>WP_Meta_Query</code>, a new “doing it wrong” notice when registering REST API endpoints, and more!"
-msgstr "Parmi les différentes améliorations, vous trouverez des mises à jour des valeurs de la constante <code>WP_DEBUG_LOG</code>, un nouvelle constante de test du fichier de configuration dans la suite de tests, de nouveaux crochets d’action d’extension, des filtres coupe-circuits pour <code>wp_unique_post_slug()</code>, <code>WP_User_Query</code> et <code>count_users()</code>, une nouvelle fonction <code>human_readable_duration</code>, une amélioration du nettoyage du bloc méta de la taxonomie, une prise en charge limitée de <code>LIKE</code> pour les clés méta lorsque vous utilisez <code>WP_Meta_Query</code>, une nouvelle notification « Une erreur est survenue » lors de l’enregistrement de points de terminaison de l’API REST, et bien plus encore !"
+msgstr "Parmi les différentes améliorations, vous trouverez des mises à jour des valeurs de la constante <code>WP_DEBUG_LOG</code>, un nouvelle constante de test du fichier de configuration dans la suite de tests, de nouveaux crochets d’action d’extension, des filtres coupe-circuits pour <code>wp_unique_post_slug()</code>, <code>WP_User_Query</code> et <code>count_users()</code>, une nouvelle fonction <code>human_readable_duration</code>, une amélioration du nettoyage du bloc méta de la taxonomie, une prise en charge limitée de <code>LIKE</code> pour les clés méta lorsque vous utilisez <code>WP_Meta_Query</code>, une nouvelle notification « Une erreur est survenue » lors de l’enregistrement de points de terminaison de l’API REST, et bien plus encore !"
 
 #: wp-admin/about.php:144
 msgid "Other Developer Goodness"
@@ -61,7 +61,7 @@ msgstr "Métadonnées de multisites"
 
 #: wp-admin/about.php:104
 msgid "Introduced in WordPress 5.0, the new block editor continues to improve. Most significantly, WordPress 5.1 includes solid performance improvements within the editor. The editor should feel a little quicker to start, and typing should feel smoother. Nevertheless, expect more performance improvements in the next releases."
-msgstr "Introduit lors de WordPress 5.0, le nouvel éditeur continue de s’améliorer. Plus particulièrement, WordPress 5.1 présente un réel gain de performance au sein de l’éditeur : il devrait vous paraître plus rapide à se lancer, et la saisie de texte devrait être plus fluide. De manière générale, attendez-vous à des améliorations côté performance sur les prochaines versions."
+msgstr "Introduit lors de WordPress 5.0, le nouvel éditeur continue de s’améliorer. Plus particulièrement, WordPress 5.1 présente un réel gain de performance au sein de l’éditeur : il devrait vous paraître plus rapide à se lancer, et la saisie de texte devrait être plus fluide. De manière générale, attendez-vous à des améliorations côté performance sur les prochaines versions."
 
 #: wp-admin/about.php:100
 msgid "Editor Performance"
@@ -394,7 +394,7 @@ msgstr "Note pour les utilisateurs et utilisatrices de technologies d’assistan
 
 #: wp-admin/about.php:169
 msgid "The Classic Editor plugin restores the previous WordPress editor and the Edit Post screen. It lets you keep using plugins that extend it, add old-style meta boxes, or otherwise depend on the previous editor. To install, visit your plugins page and click the &#8220;Install Now&#8221; button next to &#8220;Classic Editor&#8221;. After the plugin finishes installing, click &#8220;Activate&#8221;. That’s it!"
-msgstr "L’extension Éditeur Classique rétablit l’éditeur précédent de WordPress, ainsi que son écran de rédaction précédent. Cela vous permet de continuer à utiliser les extensions qui étendent cet éditeur original, d’y ajouter des champs méta comme avant, et de manière générale vous permet de continuer à utiliser l’ancien éditeur. Pour l’installer, rendez vous sur la pages Extensions et cliquez sur « Installer maintenant » qui se trouve à côté de « Classic Editor ». Après que l’extension ait terminé de s’installer, cliquez sur « Activer ». C’est tout !"
+msgstr "L’extension Classic Editor rétablit l’éditeur précédent de WordPress, ainsi que son écran de rédaction précédent. Cela vous permet de continuer à utiliser les extensions qui étendent cet éditeur original, d’y ajouter des champs méta comme avant, et de manière générale vous permet de continuer à utiliser l’ancien éditeur. Pour l’installer, rendez-vous sur la page Extensions et cliquez sur « Installer maintenant » qui se trouve à côté de « Classic Editor ». Après que l’extension ait terminé de s’installer, cliquez sur « Activer ». C’est tout !"
 
 #: wp-admin/about.php:168
 msgid "Prefer to stick with the familiar Classic Editor? No problem! Support for the Classic Editor plugin will remain in WordPress through 2021."
@@ -1719,7 +1719,7 @@ msgstr "Installations actives :"
 
 #: wp-admin/includes/ms.php:1154
 msgid "<strong>Settings</strong> &mdash; This page shows a list of all settings associated with this site. Some are created by WordPress and others are created by plugins you activate. Note that some fields are grayed out and say Serialized Data. You cannot modify these values due to the way the setting is stored in the database."
-msgstr "<strong>Réglages</strong> &mdash; Cette page affiche une liste de tous les réglages associés à ce site. Certains sont créés par WordPress, d’autres par les extensions que vous activez. notez que certains champs sont grisé et affichent « Serialized Data » ; vous ne pouvez pas modifier ces valeurs en raison de la manière dont elles sont stockées dans la base de données."
+msgstr "<strong>Réglages</strong> &mdash; Cette page affiche une liste de tous les réglages associés à ce site. Certains sont créés par WordPress, d’autres par les extensions que vous activez. notez que certains champs sont grisé et affichent « Serialized Data » ; vous ne pouvez pas modifier ces valeurs en raison de la manière dont elles sont stockées dans la base de données."
 
 #: wp-admin/includes/ms.php:1153
 msgid "<strong>Themes</strong> &mdash; This area shows themes that are not already enabled across the network. Enabling a theme in this menu makes it accessible to this site. It does not activate the theme, but allows it to show in the site&#8217;s Appearance menu. To enable a theme for the entire network, see the <a href=\"%s\">Network Themes</a> screen."
@@ -1731,7 +1731,7 @@ msgstr "<strong>Utilisateurs</strong> &mdash; Cette page affiche les utilisateur
 
 #: wp-admin/includes/ms.php:1151
 msgid "<strong>Info</strong> &mdash; The site URL is rarely edited as this can cause the site to not work properly. The Registered date and Last Updated date are displayed. Network admins can mark a site as archived, spam, deleted and mature, to remove from public listings or disable."
-msgstr "<strong>Info</strong> &mdash; L’adresse web du site est rarement modifiée, car cela peut empêche le site de fonctionnement correctement. Les dates de création et de dernière mise à jour sont affichées. Les administrateurs du réseau peuvent archiver un site, le marquer comme indésirable, le supprimer et le marquer comme étant « pour adultes », afin de le retirer de la liste publique, ou le désactiver."
+msgstr "<strong>Info</strong> &mdash; L’adresse web du site est rarement modifiée, car cela peut empêche le site de fonctionnement correctement. Les dates de création et de dernière mise à jour sont affichées. Les administrateurs du réseau peuvent archiver un site, le marquer comme indésirable, le supprimer et le marquer comme étant « pour adultes », afin de le retirer de la liste publique, ou le désactiver."
 
 #: wp-admin/includes/ms.php:1150
 msgid "The menu is for editing information specific to individual sites, particularly if the admin area of a site is unavailable."
@@ -4886,7 +4886,7 @@ msgstr "SUCCÈS : %s"
 #. translators: %s: WordPress core version
 #: wp-admin/includes/class-wp-automatic-updater.php:844
 msgid "FAILED: WordPress failed to update to %s"
-msgstr "ÉCHEC : WordPress n’a pas pu être mis à jour vers %s"
+msgstr "ÉCHEC : WordPress n’a pas pu être mis à jour en %s"
 
 #. translators: %s: WordPress core version
 #: wp-admin/includes/class-wp-automatic-updater.php:841
@@ -6895,7 +6895,7 @@ msgstr "Vous pouvez afficher tous les articles faits par un même utilisateur en
 
 #: wp-admin/users.php:53
 msgid "<strong>Edit</strong> takes you to the editable profile screen for that user. You can also reach that screen by clicking on the username."
-msgstr "« <strong>Modifier</strong> » vous envoie sur l’écran de modification de cet utilisateur. Vous pouvez également vous rendre sur cet écran en cliquant sur le nom de l’utilisateur."
+msgstr "« <strong>Modifier</strong> » vous envoie sur l’écran de modification de cet utilisateur. Vous pouvez également vous rendre sur cet écran en cliquant sur le nom de l’utilisateur."
 
 #: wp-admin/edit.php:240
 msgid "<strong>Edit</strong> takes you to the editing screen for that post. You can also reach that screen by clicking on the post title."
