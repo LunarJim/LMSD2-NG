@@ -24,10 +24,26 @@
       <div class="posts__content bg-warning pl-1 pr-1 pt-1 pb-1 rounded shadow  bg-warning rounded">
         <?php the_content(); ?>
           <hr>
-          <div class=" row ml-3 post-rate">
-            <a href=""> <button type="button" class="btn btn-secondary mb-1 mr-1 pl-1 pr-1">Classique</button></a>
-            <a href=""><button type="button" class="btn btn-secondary mb-1 pl-1 pr-1">Humour</button></a>
+
+          
+
+          <div class=" row ml-3 post__category">
+
+            <?php // affichage des catégories 
+
+            $terms = wp_get_post_terms(get_the_ID(),'categorie');
+
+            if(is_array($terms)): 
+
+            foreach ($terms as $term):  ?>
+
+            <a href="<?=get_term_link($term); ?>"> <button type="button" class="btn btn-secondary mb-1 mr-1 pl-1 pr-1"><?= $term->name; ?></button></a>
+
+            <?php endforeach; endif; ?>
+            
           </div>
+
+          
           <div class="container">
             <button type="button" class="btn btn-primary">
             <i class="fas fa-heart"></i> <span class="badge badge-success">4</span>
