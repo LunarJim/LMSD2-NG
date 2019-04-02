@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: random
+Template Post Type: page
+*/ ?>
+
 <?php get_header();?>
 
 <div class="main container posts">
@@ -10,8 +16,9 @@
   // query des cpt quotes
 
   $args = [
-    'post_type'  => 'quote',
-    'posts_per_page' => -1,
+    'orderby'          => 'rand',
+    'post_type'        => 'quote',
+    'posts_per_page'   => -1,
   ];
 
   $quotes = new WP_Query($args);
