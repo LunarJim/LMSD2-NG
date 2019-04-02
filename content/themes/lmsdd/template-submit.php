@@ -35,15 +35,15 @@ Template Post Type: page
 
           <!-- formulaire de soumission de citation -->
         
-          <form>
+          <form action="" method="post">
               <div class="form-group">
                 <label for="email" class="text-white">Email</label>
-                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" value="<?php echo $current_user->user_email ?>" required>
                 <small id="emailHelp" class="form-text text-muted"></small>
               </div>
               <div class="form-group">
                 <label for="Pseudo" class="text-white">Pseudo</label>
-                <input type="text" class="form-control" id="" placeholder="Pseudo" name="author" required>
+                <input type="text" class="form-control" id="" placeholder="Pseudo" name="author" value="<?php echo $current_user->user_login ?>" required>
               </div>
               <div class="form-group">
                   <label for="exampleFormControlTextarea1" class="text-white">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>

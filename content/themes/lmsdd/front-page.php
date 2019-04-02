@@ -22,7 +22,8 @@
 
     <div class="col-lg-4 col-sm-6 posts__sticker">
       <div class="posts__content bg-warning pl-1 pr-1 pt-1 pb-1 rounded shadow  bg-warning rounded">
-        <?php the_content(); ?>
+      <span class=""><?php the_content(); ?></span>
+        
           
 
           
@@ -54,8 +55,8 @@
             <button type="button" class="btn btn-primary">
               <i class="fas fa-temperature-high"></i> <span class="badge badge-danger">4</span>
             </button>
-              
-            </div>
+          </div>
+          <div class="font-italic font-size-small mt-1"><a href="<?php the_author_link(); ?>">Par <?php the_author();?></a></div>
         </div>
       </div>
       <?php endwhile; wp_reset_postdata(); endif; ?>
