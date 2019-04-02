@@ -13,10 +13,11 @@
 <body>
   <header class="container-fluid p-0 fixed-top">
       <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand mr-5 " href="<?= get_home_url() ?>">
-            <h1 class="logo">
-              <span class="logo-name text-white mb-0">LMSD</span><i class="fas fa-hand-spock text-white"></i>
+          <a class="navbar-brand mr-5 logo" href="<?= get_home_url() ?>">
+            <h1 class="logo mb-0">
+              <span class="logo__name text-white mb-0">LMSD</span><i class="fas fa-hand-spock text-white"></i>
             </h1>
+            <p class="font-italic text-white logo__slogan">Le monde se divise en 2</p>
           </a>
           <ul class="navbar-nav ml-5">
               <li class="nav-item active dropdown">
@@ -49,7 +50,7 @@
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <a class="btn btn-primary btn-submit mr-5" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta vision du monde ici !</span></a>
-            <form class="form-inline my-2 my-lg-0 mr-5 ">
+            <form class="form-inline my-2 my-lg-0 mr-5" method="get">
               <input class="form-control mr-sm-2 d-none d-sm-block" value="<?php the_search_query(); ?>" type="search" placeholder="Recherche ?" aria-label="Search" name="s">
             </form>
 
