@@ -56,6 +56,7 @@
             </button>
               
             </div>
+            <div class="font-italic font-size-small mt-1"><a href="<?php the_author_link(); ?>">Par <?php the_author();?></a></div>
         </div>
       </div>
       <?php endwhile; wp_reset_postdata(); endif; ?>
