@@ -41,10 +41,7 @@ else:
     <div class="col-lg-4 col-sm-6 posts__sticker">
       <div class="posts__content bg-warning pl-1 pr-1 pt-1 pb-1 rounded shadow  bg-warning rounded">
         <?php the_content(); ?>
-          <hr>
-
-          
-
+      
           <div class=" row ml-3 post__category">
 
             <?php // affichage des catégories 
@@ -72,7 +69,6 @@ else:
             <button type="button" class="btn btn-primary">
               <i class="fas fa-temperature-high"></i> <span class="badge badge-danger">4</span>
             </button>
-              <a class="ml-3" href=""><i class="fas fa-share-alt share"></i></a>
             </div>
         </div>
       </div>
