@@ -20,6 +20,10 @@ function connect() {
             $creds['remember'] = false;
             
             $userLogged = wp_signon( $creds, false );
+
+            if (!empty($_POST['rememberMe'])&&$_POST['rememberMe']==='rememberMe-yes'){
+              wp_set_auth_cookie($user->ID, true);
+            }
         
             // wp_set_current_user($userLogged); 
 
@@ -62,6 +66,10 @@ function create_new_user() {
             $creds['user_password'] = $create_password;
             $creds['remember'] = false;
             $user = wp_signon( $creds, false );
+
+            if (!empty($_POST['rememberMe-na']) && ($_POST['rememberMe-na']==='rememberMe-na-yes')){
+                wp_set_auth_cookie(get_current_user_id, true);
+              }
 
             // Redirection
             wp_redirect(get_home_url()); exit;

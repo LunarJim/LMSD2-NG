@@ -32,7 +32,7 @@ Template Post Type: page
                 <!--checkbox -->
 
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="checkBox_has_account">
+                <input type="checkbox" class="form-check-input" id="checkBox_has_account" name="rememberMe" value="rememberMe-yes">
                 <label class="form-check-label" for="checkBox_has_account">Se souvenir de moi</label>
               </div>
               <button type="submit" id="login-submit" class="btn btn-primary">Connexion</button>
@@ -68,7 +68,7 @@ Template Post Type: page
                   <input type="password" class="form-control field-input-na" id="password2_no_account" placeholder="Mot de passe" name="password2_no_account" required>
                 </div>
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="rememberMe-na" name="rememberMe-na" value="rememberMe-na-Yes>
                 <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
               </div>
               <button type="submit" class="btn btn-primary">Créer un compte</button>
