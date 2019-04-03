@@ -46,3 +46,16 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
+
+// fonction permettant le display des cpt dans la page author
+
+function author_custom_post_types( $query ) {
+  if( is_author() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'quote'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'author_custom_post_types' );
+
