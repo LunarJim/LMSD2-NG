@@ -8,7 +8,7 @@ var advote = 0;  // variable checked in addVote(), if is 0 cann vote, else, not
 
 // gets all DIVs, store in $ivotings, and in $ar_elm DIVs with class: "vot_plus", "vot_mp", and data-vote_id="..", sends to votAjax()
 var getVotsElm = function () {
-  var obj_div = document.querySelectorAll('.vot_mp1, .vot_mp2, .vot_plus');
+  var obj_div = document.querySelectorAll('.vot_mp2');
   for(var i=0; i<obj_div.length; i++) {
       var elm_id = obj_div[i].getAttribute('data-vote_id');
       if(elm_id) {
@@ -28,21 +28,20 @@ function addVotData(elm_id, v_plus, v_minus, voted){
   // exists elm_id stored in ivotings
   if(ivotings[elm_id]){
     // sets to add "onclick" for vote down (minus) / up (plus), if voted is 0
-    var clik_down = (voted == 0) ? ' onclick="addVote(this, -1)"' : ' onclick="alert(\'You already voted\')"';
-    var clik_up = (voted == 0) ? ' onclick="addVote(this, 1)"' : ' onclick="alert(\'You already voted\')"';
+    var clik_down = (voted == 0) ? ' onclick="addVote(this, -1)"' : ' onclick="alert(\'Tu as déjà voté pour cette citation\')"';
+    var clik_up = (voted == 0) ? ' onclick="addVote(this, 1)"' : ' onclick="alert(\'Tu as déjà voté pour cette citation\')"';
 
     // if vot_plus, add code with <img> 'votplus', else, if vot_mp1/2, add code with <img> 'votup',  'votdown'
     if(ivotings[elm_id].className =='vot_plus') {    // simple vote
       ivotings[elm_id].innerHTML = '<h4>'+ vote+ '</h4><div class="vot_plus"'+ clik_up+ '> &nbsp;</div>';
     }
-    else if(ivotings[elm_id].className=='vot_mp1') {   // up/down with total Votes
-      ivotings[elm_id].innerHTML = '<div class="nvotes">Votes: <b>'+ nvotes+ '</b></div><h4>'+ vote+ '</h4><div class="v_minus"'+ clik_down+ '> &nbsp;</div><div class="v_plus"'+ clik_up+ '> &nbsp;</div>';
-    }
-    else if(ivotings[elm_id].className=='vot_mp2') {      // up/down with number of votes up and down
-      ivotings[elm_id].innerHTML = '<h4>'+ vote+ '</h4><div class="v_minus"'+ clik_down+ '>'+ v_minus+ '</div><div class="vot_pm v_plus"'+ clik_up+ '>'+ v_plus+ '</div>';
+    else if(ivotings[elm_id].className=='vot_mp2')  {      // up/down with number of votes up and down
+      ivotings[elm_id].innerHTML = '<button type="button" class="btn btn-primary"><i class="fas fa-temperature-high"></i> <span class="badge badge-danger">'+ vote+ '</span></button><button type="button" class="btn btn-primary"'+ clik_down+ '><i class="fas fa-heart-broken"></i> <span class="badge badge-danger">' + v_minus+ '</span></button> <button type="button" class="btn btn-primary"'+ clik_up+ '><i class="fas fa-heart"></i> <span class="badge badge-success">'+ v_plus+ '</span></button>';
     }
   }
 }
+
+
 
 // Sends data to votAjax(), that will be send to PHP to register the vote
 function addVote(ivot, vote) {
