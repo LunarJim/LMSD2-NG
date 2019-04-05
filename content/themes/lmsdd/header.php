@@ -40,9 +40,8 @@
 
                 <?php endforeach; endif; ?>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item text-success" href="#">Top 10</a>
+                  <a class="dropdown-item text-success" href="<?= get_page_link(80);?>">Top 10</a>
                   <a class="dropdown-item text-success" href="<?= get_page_link(72);?>">Random</a>
-                  <a class="dropdown-item text-success" href="#">Le choix du patron</a>
                   <a class="dropdown-item text-success" href="<?= get_post_type_archive_link( 'quote' ); ?>">je veux tout !</a>
                 </div>
               </li>

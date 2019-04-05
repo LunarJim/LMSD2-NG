@@ -3,7 +3,7 @@ var ivotings = [];      // store the items with voting
 var ar_elm = [];       // store the items that will be send to votAjax()
 var i_elm = 0;          // Index for elements aded in ar_elm
 var itemvotin ='';       // store the voting of voted item
-var voting_mp ='content/plugins/rating-system/voting_mp/';      // directory with files for script
+var voting_mp ='/LMSD2-NG/content/plugins/rating-system/';      // directory with files for script
 var advote = 0;  // variable checked in addVote(), if is 0 cann vote, else, not
 
 // gets all DIVs, store in $ivotings, and in $ar_elm DIVs with class: "vot_plus", "vot_mp", and data-vote_id="..", sends to votAjax()
@@ -35,6 +35,8 @@ function addVotData(elm_id, v_plus, v_minus, voted){
     if(ivotings[elm_id].className =='vot_plus') {    // simple vote
       ivotings[elm_id].innerHTML = '<h4>'+ vote+ '</h4><div class="vot_plus"'+ clik_up+ '> &nbsp;</div>';
     }
+
+    // Ajout des boutons à la div vote 
     else if(ivotings[elm_id].className=='vot_mp2')  {      // up/down with number of votes up and down
       ivotings[elm_id].innerHTML = '<button type="button" class="btn btn-primary"><i class="fas fa-temperature-high"></i> <span class="badge badge-danger">'+ vote+ '</span></button><button type="button" class="btn btn-primary"'+ clik_down+ '><i class="fas fa-heart-broken"></i> <span class="badge badge-danger">' + v_minus+ '</span></button> <button type="button" class="btn btn-primary"'+ clik_up+ '><i class="fas fa-heart"></i> <span class="badge badge-success">'+ v_plus+ '</span></button>';
     }
@@ -67,7 +69,7 @@ function votAjax(elm, vote) {
   // joins the array items into a string, separated by '&'
   datasend = datasend.join('&')+'&vote='+vote;
 
-  reqob.open('POST', voting_mp+'voting.php', true);      // crate the request
+  reqob.open('POST', voting_mp+'voting_mp/voting.php', true);      // crate the request
 
   reqob.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');    // header for POST
   reqob.send(datasend);    //  make the ajax request, poassing the data

@@ -38,17 +38,7 @@
           </div>
 
           
-          <div class="container">
-            <button type="button" class="btn btn-primary">
-            <i class="fas fa-heart"></i> <span class="badge badge-success">4</span>
-            </button>
-            <button type="button" class="btn btn-primary">
-              <i class="fas fa-heart-broken"></i> <span class="badge badge-danger">4</span>
-            </button>
-            <button type="button" class="btn btn-primary">
-              <i class="fas fa-temperature-high"></i> <span class="badge badge-danger">4</span>
-            </button>
-          </div>
+          <div class="vot_mp2" data-vote_id="<?php the_ID();?>"></div>
           <div class="font-italic font-size-small mt-1">Par <?php the_author_posts_link();?></div>
         </div>
       </div>
