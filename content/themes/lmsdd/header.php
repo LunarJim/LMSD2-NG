@@ -52,16 +52,27 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <a class="btn btn-primary btn-submit mr-5" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta vision du monde ici !</span></a>
             <form class="form-inline my-2 my-lg-0 mr-5" method="get">
-              <input class="form-control mr-sm-2 d-none d-sm-block" value="<?php the_search_query(); ?>" type="search" placeholder="Recherche ?" aria-label="Search" name="s">
+              <input class="form-control mr-sm-2 d-none d-sm-block" value="<?php the_search_query(); ?>" type="search" placeholder="Rechercher" aria-label="Search" name="s">
             </form>
 
-
+            <!-- bouton de connexion/inscription qui est modifié si user connecté -->
 
             <?php if(is_user_logged_in()):?>
             <?php $current_user = wp_get_current_user(); ?>
-            <a href=""> <button type="button" class="btn btn-warning ">Hello <?=$current_user->user_nicename?> !</button></a>
+            
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Hello <?= $current_user->user_nicename ?> !
+              </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <a href="<?= get_page_link(81);?>"> <button class="dropdown-item" type="button">Mon compte</button></a>
+                  <a href="<?= wp_logout_url(get_home_url());?>"> <button class="dropdown-item" type="button">Déconnexion</button></a>
+                </div>
+            </div>
             <?php else: ?>
+
             <a href="<?= get_page_link(11); ?>"> <button type="button" class="btn btn-warning ">Connexion/inscription</button></a>
+
             <?php endif; ?>
           </div>
         </nav>

@@ -38,7 +38,7 @@ Template Post Type: page
               <button type="submit" id="login-submit" class="btn btn-primary">Connexion</button>
             </form>
             <br>
-            <div><a href="">mot de passe oublié ?</a></div>
+            <div><a href="<?= wp_lostpassword_url(); ?>">mot de passe oublié ?</a></div>
       </div>
 
       <!-- Formulaire d'inscription -->
