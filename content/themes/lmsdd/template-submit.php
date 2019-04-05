@@ -36,6 +36,7 @@ Template Post Type: page
           <!-- formulaire de soumission de citation -->
         
           <form action="" method="post">
+          <div class="" id="errors-submit" role="alert">
               <div class="form-group">
                 <label for="email" class="text-white">Email</label>
                 <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" value="<?php echo $current_user->user_email ?>" required>
@@ -60,3 +61,26 @@ Template Post Type: page
   </div>
 
 <?php get_footer(); ?>
+
+<script src="<?= get_theme_file_uri('submit.js')?>"></script>
+
+<script>
+<?php
+
+// Si j'ai un message à afficher...
+if (!empty($_SESSION['message-submit'])) {
+
+    // Alors je l'affiche
+    echo 'app.errorsMsg.push("'.$_SESSION['message-submit'].'");';
+
+    // PUIS, comme il vient d'être affiché, je le supprime
+    $_SESSION['message'] = [];
+
+    // ... ainsi mon message ne sera plus affiché
+}
+
+?>
+
+// script js création de compte 
+
+</script>

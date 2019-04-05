@@ -8,3 +8,4 @@ function lmsdd_setup()
 }
 
 add_action('after_setup_theme', 'lmsdd_setup');
+

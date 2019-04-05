@@ -108,10 +108,10 @@ var appRegister = {
         field.classList.remove('valid');
   
         // Si le champ n'est pas correctement renseigné
-        if (field.value.length < 4) {
+        if (field.value.length < 5) {
   
             // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
-            appRegister.errorsMsgNa.push('Le champ '+ field.placeholder +' doit contenir au moins 4 caractères');
+            appRegister.errorsMsgNa.push('Le champ '+ field.placeholder +' doit contenir au moins 5 caractères');
   
             // J'ajoute une classe d'erreur
             field.classList.add('invalid');

@@ -12,16 +12,13 @@ var app = {
         console.log('app.init');
   
         // Je cible mon element qui va contenir mes messages d'erreurs
-        app.elements.errorsArea = document.getElementById('errors');
+        app.elements.errorsArea = document.getElementById('errors-submit');
   
         // Je cible mon element "form"
         app.elements.loginForm = document.getElementById('login-form');
   
         // Je cible mes inputs
         app.elements.fields = document.querySelectorAll('.field-input');
-  
-        // Je cible l'oeil
-        app.elements.reveal = document.getElementById('reveal');
   
         // J'execute la méthode qui va déployer les addEventListener sur mes elements
         app.createListeners();
