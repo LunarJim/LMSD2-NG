@@ -34,3 +34,11 @@ function lmsdd_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'lmsdd_scripts');
+
+// logo personnalisé
+
+function lmsdd_custom_login_logo() {
+ echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login.css" />';
+}
+
+add_action('login_head', 'lmsdd_custom_login_logo');?>
