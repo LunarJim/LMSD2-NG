@@ -16,13 +16,13 @@
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand mr-5 logo" href="<?= get_home_url() ?>">
             <h1 class="logo mb-0">
-              <span class="logo__name text-white mb-0">LMSD</span><i class="fas fa-hand-spock text-white"></i>
+              <span class="logo__name mb-0">LMSD</span><i class="fas fa-hand-spock"></i>
             </h1>
-            <p class="font-italic text-white logo__slogan">Le monde se divise en 2</p>
+            <p class="font-italic logo__slogan">Le monde se divise en 2</p>
           </a>
           <ul class="navbar-nav ml-5">
               <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle text-uppercase text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Catégories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
