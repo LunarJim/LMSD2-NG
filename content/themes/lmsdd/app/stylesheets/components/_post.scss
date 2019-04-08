@@ -1,6 +1,7 @@
 
 .posts {
     margin-top: 10em;
+    
   }
 
   .posts__content {
@@ -8,10 +9,16 @@
     margin-top: 2em;
     margin-left: 1em;
     margin-right: 1em;
+    background-color: $white;
   }
   
   .posts__sticker {
     min-height: 15em;
+  }
+
+  .author {
+    color: $white-gray;
+    text-decoration: none;
   }
 
   

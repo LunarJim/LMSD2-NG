@@ -1,4 +1,11 @@
-.logo__slogan {
-    margin-top: -0.5em;
-    font-size: 0.7em;
+.logo {
+    color: $dark-blue;
+
+    &__slogan {
+            margin-top: -0.5em;
+            font-size: 0.7em;
+            color: $dark-blue
+    }
 }
+
+

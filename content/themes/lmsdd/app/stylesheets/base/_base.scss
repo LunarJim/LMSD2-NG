@@ -7,12 +7,13 @@ html {
     body {
     font-family: 'Acme', sans-serif;
     margin: 0;
+    color: $middle-blue;
   
     background-image:
     radial-gradient(
       circle at top right,
-      #2b46f2,
-      #ed0909
+      $light-blue,
+      $dark-blue
     );
     
   }

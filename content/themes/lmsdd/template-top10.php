@@ -26,14 +26,14 @@ $results = $wpdb->get_results( "SELECT id, (v_plus - v_minus) AS score FROM voti
 
     <div class="col-lg-4 col-sm-6 posts__sticker">
     
-      <div class="posts__content bg-warning pl-1 pr-1 pt-1 pb-1 rounded shadow  bg-warning rounded">
+      <div class="posts__content  pl-1 pr-1 pt-1 pb-1 rounded shadow rounded">
 
       <?php $content = get_post_field('post_content', $value->id)  ?>
       <?php $author = get_post_field('post_author', $value->id) ?>
 
       <span class=""><?= $content; ?></span>
 
-          <div class=" row ml-3 post__category">
+          <div class=" post__category">
 
             <?php // affichage des catégories 
 

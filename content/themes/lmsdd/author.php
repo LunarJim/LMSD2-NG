@@ -14,14 +14,14 @@
 
 
     <div class="col-lg-4 col-sm-6 posts__sticker">
-      <div class="posts__content bg-warning pl-1 pr-1 pt-1 pb-1 rounded shadow  bg-warning rounded">
+      <div class="posts__content  pl-1 pr-1 pt-1 pb-1 rounded shadow rounded">
       <span class=""><?php the_content(); ?></span>
         
           
 
           
 
-          <div class=" row ml-3 post__category">
+          <div class="post__category">
 
             <?php // affichage des catégories 
 

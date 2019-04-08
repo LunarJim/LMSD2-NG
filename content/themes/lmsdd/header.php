@@ -61,7 +61,7 @@
             <?php $current_user = wp_get_current_user(); ?>
             
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle mr-5" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hello <?= $current_user->user_nicename ?> !
               </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">

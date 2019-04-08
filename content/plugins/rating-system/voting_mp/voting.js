@@ -38,7 +38,7 @@ function addVotData(elm_id, v_plus, v_minus, voted){
 
     // Ajout des boutons à la div vote 
     else if(ivotings[elm_id].className=='vot_mp2')  {      // up/down with number of votes up and down
-      ivotings[elm_id].innerHTML = '<button type="button" class="btn btn-primary"><i class="fas fa-temperature-high"></i> <span class="badge badge-danger">'+ vote+ '</span></button><button type="button" class="btn btn-primary"'+ clik_down+ '><i class="fas fa-heart-broken"></i> <span class="badge badge-danger">' + v_minus+ '</span></button> <button type="button" class="btn btn-primary"'+ clik_up+ '><i class="fas fa-heart"></i> <span class="badge badge-success">'+ v_plus+ '</span></button>';
+      ivotings[elm_id].innerHTML = '<button type="button" class="btn btn-danger"'+ clik_down+ '><i class="fas fa-heart-broken"></i> <span class="badge badge-danger">' + v_minus+ '</span></button> <button type="button" class="btn btn-success"'+ clik_up+ '><i class="fas fa-heart"></i> <span class="badge badge-success">'+ v_plus+ '</span></button><button type="button" class="btn btn-light ml-2"><i class="fas fa-temperature-high"></i> <span class="badge badge-warning">'+ vote+ '</span></button>';
     }
   }
 }
