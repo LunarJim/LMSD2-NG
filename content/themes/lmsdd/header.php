@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Le Monde se divise en 2</title>
-  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Itim|Pangolin|Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <?php wp_head(); ?>
@@ -28,11 +28,11 @@
 
           <!-- collapse navbar -->
 
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 
           <!-- dropdown categories -->
 
-            <div class="dropdown mr-5">
+            <div class="dropdown mr-3">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Catégories
                 </button>
@@ -73,8 +73,10 @@
 
             <!-- submit button -->
 
-            <a class="btn btn-primary btn-submit mr-5" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta vision du monde ici !</span>
-            </a>
+            <span>
+              <a class="btn btn-primary btn-submit mr-5" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta citation</span>
+              </a>
+            </span>
 
           <!-- search field -->
 
@@ -89,7 +91,7 @@
             <?php $current_user = wp_get_current_user(); ?>
             
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle mr-5" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hello <?= $current_user->user_nicename ?> !
               </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
