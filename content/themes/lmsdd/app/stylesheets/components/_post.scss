@@ -1,8 +1,4 @@
 
-.posts {
-    margin-top: 10em;
-    
-  }
 
   .posts__content {
     
@@ -19,9 +15,10 @@
     margin-top: 1em;
   }
 
-  .author {
-    color: $white-gray;
-    text-decoration: none;
-  }
+.author {
+  
+  color: inherit;
+  text-decoration: none;
+}
 
   

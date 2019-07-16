@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Le Monde se divise en 2</title>
-  <link href="https://fonts.googleapis.com/css?family=Itim|Pangolin|Roboto:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pangolin|Permanent+Marker|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <?php wp_head(); ?>
@@ -12,7 +12,7 @@
 <body>
   <header class="container-fluid p-0 fixed-top">
       <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand mr-5 logo" href="<?= get_home_url() ?>">
+          <a class="navbar-brand logo" href="<?= get_home_url() ?>">
             <h1 class="logo mb-0">
               <span class="logo__name mb-0">LMSD</span><i class="fas fa-hand-spock"></i>
             </h1>
@@ -33,30 +33,13 @@
           <!-- dropdown categories -->
 
             <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle font-weight-bold" type="button" id="categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Catégories
                 </button>
                 <div class="dropdown-menu" aria-labelledby="categories">
 
-                  <?php $categories = $terms = get_Terms(array(
-                  'taxonomy' => 'categorie',
-                  'hide_empty' => false,
-                  ));
-
-                  if(is_array($categories)):
-
-                  foreach ($categories as $category): ?>
-
-                  <a href="<?php echo get_term_link($category); ?>">
-                    <button class="dropdown-item"><?= $category->name; ?>
-                    </button>
-                  </a> 
-
-                    <?php endforeach; endif; ?>
-
-                  <div class="dropdown-divider"></div>
-                    <a href="<?= get_page_link(80);?>">
-                      <button class="dropdown-item text-success">Top 10
+                  <a href="<?= get_page_link(80);?>">
+                      <button class="dropdown-item text-success font-weight-bold">Top 10
                       </button>
                     </a>
                     <a href="<?= get_page_link(72);?>">
@@ -67,14 +50,40 @@
                       <button class="dropdown-item text-success">Tout voir
                       </button>
                     </a>
+
+                    <div class="dropdown-divider"></div>
+
+                  <?php $categories = $terms = get_Terms(array(
+                  'taxonomy' => 'categorie',
+                  'hide_empty' => false,
+                  ));
+
+                  
+
+
+                  if(is_array($categories)):
+
+                  foreach ($categories as $category): ?>
+
+                  <a href="<?php echo get_term_link($category); ?>">
+                    <button class="dropdown-item"><?= $category->name; ?><?=" ($category->count)" ?>
+                    </button>
+                  </a> 
+
+                    <?php endforeach; endif; ?>
+
+                  
+                    
                   </div>
               
             </div>
 
+            
+
             <!-- submit button -->
 
             <span>
-              <a class="btn btn-primary btn-submit mr-5" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta citation</span>
+              <a class="btn btn-primary btn-submit mr-5 font-weight-bold" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta citation</span>
               </a>
             </span>
 
@@ -91,8 +100,8 @@
             <?php $current_user = wp_get_current_user(); ?>
             
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Hello <?= $current_user->user_nicename ?> !
+              <button class="btn btn-secondary dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Hello <?= $current_user->display_name ?> !
               </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <a href="<?= get_page_link(81);?>"> <button class="dropdown-item" type="button">Mon compte</button></a>

@@ -5,9 +5,9 @@ html {
   }
     
     body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
-    color: $middle-blue;
+    color: $dark-blue;
   
     background-image:
     radial-gradient(
@@ -17,6 +17,11 @@ html {
     );
     
   }
+
+.main {
+  margin-top: 10em;
+  
+}
 
   @media (max-width: 991px) {
     body {

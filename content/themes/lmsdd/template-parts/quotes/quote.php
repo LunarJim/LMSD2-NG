@@ -1,5 +1,5 @@
 <div class="col-lg-4 col-sm-6 posts__sticker">
-    <div class="posts__content pl-1 pr-1 pt-1 pb-1 rounded shadow rounded">
+    <div class="posts__content pl-1 pr-1 pt-1 pb-1 rounded shadow rounded font-weight-bold text-uppercase">
         <?php the_content(); ?>
         
             <div class=" post__category">
@@ -19,7 +19,7 @@
             </div>
           <div class="vot_mp2" data-vote_id="<?php the_ID();?>">
           </div>
-          <div class="font-italic mt-1 author">Par <?php the_author_posts_link();?>
+          <div class="font-italic text-lowercase pt-2 author"> <?php the_author_posts_link();?>
           </div>
     </div> 
 </div>
