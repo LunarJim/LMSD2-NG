@@ -12,6 +12,7 @@ if (!defined('WPINC')) {die();}
 require plugin_dir_path(__FILE__) . 'inc/quote_cpt.php';
 require plugin_dir_path(__FILE__) . 'inc/submit.php';
 require plugin_dir_path(__FILE__) . 'inc/connect.php';
+// require plugin_dir_path(__FILE__) . 'inc/user-settings.php';
 
 /* 
 require plugin_dir_path(__FILE__) . 'inc/roles.php';
@@ -59,3 +60,12 @@ function author_custom_post_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'author_custom_post_types' );
 
+function register_my_session()
+{
+  if( !session_id() )
+  {
+    session_start();
+  }
+}
+
+add_action('init', 'register_my_session');

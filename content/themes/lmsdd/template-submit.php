@@ -13,7 +13,7 @@ Template Post Type: page
       <div class="col-md-6 submit-post mx-auto">
         
             <p>
-                <h4 class="text-center text-white">
+                <h4 class="text-center">
                   A toi de jouer : 
                 </h4> 
 
@@ -38,21 +38,21 @@ Template Post Type: page
           <form action="" method="post">
           <div class="" id="errors-submit" role="alert">
               <div class="form-group">
-                <label for="email" class="text-white">Email</label>
+                <label for="email" class="">Email</label>
                 <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" value="<?php echo $current_user->user_email ?>" required>
                 <small id="emailHelp" class="form-text text-muted"></small>
               </div>
               <div class="form-group">
-                <label for="Pseudo" class="text-white">Pseudo</label>
+                <label for="Pseudo" class="">Pseudo</label>
                 <input type="text" class="form-control" id="" placeholder="Pseudo" name="author" value="<?php echo $current_user->user_login ?>" required>
               </div>
               <div class="form-group">
-                  <label for="exampleFormControlTextarea1" class="text-white">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>
+                  <label for="exampleFormControlTextarea1" class="">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="cptContent" required></textarea>
                 </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="Check_publish">
-                <label class="form-check-label text-white font-italic" for="exampleCheck1" class="text-white">M'avertir lors de la publication !</label>
+                <label class="form-check-label  font-italic" for="exampleCheck1" class="">M'avertir lors de la publication !</label>
               </div>
               <button type="submit" class="btn btn-primary mb-2">Go !</button>
             </form>

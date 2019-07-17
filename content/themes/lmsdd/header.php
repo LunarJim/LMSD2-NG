@@ -9,7 +9,24 @@
 <?php wp_head(); ?>
 </head>
 
-<body>
+
+<body <?php if (isset($_POST['color']))
+    {
+      $chosenColor = $_POST['color'] ;
+    $_SESSION['user_color']='style="'.$chosenColor.'"';
+    echo $_SESSION['user_color']; 
+  }
+  
+   elseif (isset($_SESSION['user_color']) ){
+   echo $_SESSION['user_color']; 
+   }
+
+   else {
+     $_SESSION['user_color'] = 'style="background-image:
+     radial-gradient(circle at top right,#C7CDEA,#DFDFDF)';
+   }
+  
+   ?> >
   <header class="container-fluid p-0 fixed-top">
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand logo" href="<?= get_home_url() ?>">
@@ -58,8 +75,6 @@
                   'hide_empty' => false,
                   ));
 
-                  
-
 
                   if(is_array($categories)):
 
@@ -72,8 +87,6 @@
 
                     <?php endforeach; endif; ?>
 
-                  
-                    
                   </div>
               
             </div>
