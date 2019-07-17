@@ -19,6 +19,7 @@
             </div>
           <div class="vot_mp2" data-vote_id="<?php the_ID();?>">
           </div>
+          <div><?php  get_favorites_button(get_the_ID()); ?></div>
           <div class="font-italic text-lowercase pt-2 author"> <?php the_author_posts_link();?>
           </div>
     </div> 
