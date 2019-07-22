@@ -50,10 +50,16 @@
           <!-- dropdown categories -->
 
             <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle font-weight-bold" type="button" id="categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn btn-outline-dark dropdown-toggle font-weight-bold" type="button" id="categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Catégories
                 </button>
                 <div class="dropdown-menu" aria-labelledby="categories">
+                  <?php if(is_user_logged_in()):?>
+                <a href="<?= get_page_link(88);?>">
+                      <button class="dropdown-item text-success font-weight-bold">Favoris
+                      </button>
+                    </a>
+                  <?php endif; ?>
 
                   <a href="<?= get_page_link(80);?>">
                       <button class="dropdown-item text-success font-weight-bold">Top 10
@@ -96,7 +102,7 @@
             <!-- submit button -->
 
             <span>
-              <a class="btn btn-primary btn-submit mr-5 font-weight-bold" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta citation</span>
+              <a class="btn btn btn-outline-dark btn-submit mr-5 font-weight-bold" href="<?= get_page_link(70); ?>" role="button"><span class="">Ta citation</span>
               </a>
             </span>
 
@@ -113,7 +119,7 @@
             <?php $current_user = wp_get_current_user(); ?>
             
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn btn-outline-dark dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hello <?= $current_user->display_name ?> !
               </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
