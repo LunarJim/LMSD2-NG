@@ -46,7 +46,6 @@ Template Post Type: page
       $headers = array('Content-Type: text/html; charset=UTF-8');
     $wp_mail_result = wp_mail($my_mail, 'nouveau message du formulaire de contact',$contact_content,$headers);
 
-    echo $wp_mail_result;
   }
     
     ?>
