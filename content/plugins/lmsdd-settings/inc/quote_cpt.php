@@ -39,7 +39,6 @@ class Quote_cpt
             'labels'                => $quotes,
             'description'           => 'citations',
             'supports'              => [
-                'title',
                 'author',
                 'editor',
                 'thumbnail',

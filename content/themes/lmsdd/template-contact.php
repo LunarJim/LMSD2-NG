@@ -27,7 +27,7 @@ Template Post Type: page
               </div>
               
               <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Ton message</label>
+                  <label for="exampleFormControlTextarea1">Votre message</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="contact_message" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Envoyer</button>

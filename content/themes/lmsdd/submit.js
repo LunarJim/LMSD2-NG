@@ -15,7 +15,7 @@ var app = {
         app.elements.errorsArea = document.getElementById('errors-submit');
   
         // Je cible mon element "form"
-        app.elements.loginForm = document.getElementById('login-form');
+        app.elements.submitForm = document.getElementById('submit-form');
   
         // Je cible mes inputs
         app.elements.fields = document.querySelectorAll('.field-input');
@@ -31,7 +31,7 @@ var app = {
     createListeners: function() {
   
         // Sur mon formulaire, à la soumission, je vérifierai mes champs
-        app.elements.loginForm.addEventListener('submit', app.handleFormSubmit);
+        app.elements.submitForm.addEventListener('submit-form', app.handleSubmitForm);
   
         // Je vais boucler sur mon tableau de fields
         for (var index in app.elements.fields) {
@@ -53,11 +53,10 @@ var app = {
             }
         }
   
-        app.elements.reveal.addEventListener('click', app.handleRevealClick);
     },
   
     // Fonction executée par mon addEventListener sur mon form a l'evenement submit
-    handleFormSubmit: function(eventSubmit) {
+    handleSubmitForm: function(eventSubmit) {
   
   
   
@@ -89,14 +88,6 @@ var app = {
   
     },
   
-    // Fonction executée par mon addEventListener sur mes fields a l'evenement blur
-    handleFieldBlur: function(eventBlur){
-  
-        // Je récupere avec mon target l'element qui a déclenché l'evenement
-        var field = eventBlur.target;
-  
-        app.checkField(field);
-    },
   
     checkField: function(field) {
   
@@ -152,28 +143,11 @@ var app = {
         // Je place l'element dans le DOM (et donc dans la page)
         // appendChild me permet de dire: "je t'ajouter un nouvel element enfant"
         app.elements.errorsArea.appendChild(errorBox);
-    },
-  
-    handleRevealClick: function() {
-  
-        // je selectionne le champ password
-        var fieldPassword = document.getElementById('field-password');
-  
-        // Si il a un type "password"
-        if (fieldPassword.type === 'password') {
-  
-            // je le change en text pour l'afficher
-            fieldPassword.type = 'text';
-  
-        // Sinon
-        } else {
-  
-            // je le remet en password
-            fieldPassword.type = 'password';
-        }
     }
   
-  };
+    
+        
+    };
   
   // Je prends mon document et je lui ajoute un écouteur d'évenement
   // ainsi lorsque le document aura fini de construire le DOM

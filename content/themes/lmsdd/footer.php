@@ -28,7 +28,7 @@
       <div class="container-fluid footer-bottom text-center">
         <div class="row">
           <div class="col-sm">© 2019 Copyright LMSDD Team</div>
-          <div class="col-sm text-uppercase"><a class="text-reset" href="mailto:jim.deghaye@gmail.com">Contactez-nous</a></div>
+          <div class="col-sm text-uppercase"><a class="text-reset" href="<?= get_permalink(89); ?> ">Contactez-nous</a></div>
           <div class="col-sm text-uppercase"><a class="text-reset" href="">Mentions légales</a></div>
         </div>
       </div>
