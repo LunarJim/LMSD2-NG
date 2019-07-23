@@ -17,21 +17,15 @@ $results = $wpdb->get_results( "SELECT id, (v_plus - v_minus) AS score FROM voti
 <div class="main container posts">
   <div class="row mb-4 pb-3">
 
-
-
-  <?php foreach ($results as $key => $value) : ?>
-
-
-
+          <?php foreach ($results as $key => $value) : ?>
 
     <div class="col-lg-4 col-sm-6 posts__sticker">
-    
-      <div class="posts__content  pl-1 pr-1 pt-1 pb-1 rounded shadow rounded">
+      <div class="posts__content  pl-1 pr-1 pt-1 pb-1 rounded shadow rounded font-weight-bold text-uppercase">
 
-      <?php $content = get_post_field('post_content', $value->id)  ?>
-      <?php $author = get_post_field('post_author', $value->id) ?>
+              <?php $content = get_post_field('post_content', $value->id)  ?>
+              <?php $author = get_post_field('post_author', $value->id) ?>
 
-      <span class=""><?= $content; ?></span>
+      <div class="quote"><?= $content; ?></div>
 
           <div class=" post__category">
 
@@ -49,26 +43,9 @@ $results = $wpdb->get_results( "SELECT id, (v_plus - v_minus) AS score FROM voti
 
           </div>
           
-
-          
-          <!-- container original statique des votes
-
-          <div class="container">
-            <button type="button" class="btn btn-primary">
-            <i class="fas fa-heart"></i> <span class="badge badge-success">4</span>
-            </button>
-            <button type="button" class="btn btn-primary">
-              <i class="fas fa-heart-broken"></i> <span class="badge badge-danger">4</span>
-            </button>
-            <button type="button" class="btn btn-primary">
-              <i class="fas fa-temperature-high"></i> <span class="badge badge-danger">4</span>
-            </button>
-          </div>
-
-          -->
-
           <div class="vot_mp2" data-vote_id="<?= $value->id ?>"></div>
-          <div class="font-italic font-size-small mt-1">Par <a href="<?= get_author_posts_url($author); ?>"><?= get_the_author_meta('nickname',$author);?></a> </div>
+          <div class="font-italic text-lowercase mt-1"><a href="<?= get_author_posts_url($author); ?>" class=""><?= get_the_author_meta('nickname',$author);?></a>
+         </div>
         </div>
         
       </div>
