@@ -28,7 +28,7 @@
    }
   
    ?> >
-  <header class="container-fluid p-0 fixed-top">
+  <header class="container-fluid p-0 fixed-top shadow">
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand logo" href="<?= get_home_url() ?>">
             <h1 class="logo mb-0">

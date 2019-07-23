@@ -47,6 +47,8 @@ function submit_post() {
            'post_type' => 'quote',
    
            'post_author' => 4,
+
+
    
        );
    
@@ -54,6 +56,9 @@ function submit_post() {
        // $category_name = ($_POST["categorie"]);
    
        $cpt_id = wp_insert_post($my_cptpost_args);
+
+       update_field('not_connected_user_email', $_POST['email'], $cpt_id);
+       update_field('not_connected_user_name', $_POST['author'], $cpt_id);
    
        // wp_set_object_terms( $cpt_id, $category_name, 'categorie' );
  
