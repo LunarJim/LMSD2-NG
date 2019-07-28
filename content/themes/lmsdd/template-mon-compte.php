@@ -48,7 +48,7 @@ Template Post Type: page
                     <input type="radio" id="customRadio7" name="cursor" value="cursor-classic.css" class="custom-control-input" checked>
                     <label class="custom-control-label" for="customRadio7">Défaut : curseur</label>
                 </div>
-                <button type="submit" name="color-submit" class="btn btn-primary mt-2">Enregistrer la couleur</button>
+                <button type="submit" name="color-submit" class="btn btn-primary mt-2">Enregistrer mon curseur</button>
             </form>
         </div>
 

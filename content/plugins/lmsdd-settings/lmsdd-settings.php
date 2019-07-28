@@ -12,6 +12,7 @@ if (!defined('WPINC')) {die();}
 require plugin_dir_path(__FILE__) . 'inc/quote_cpt.php';
 require plugin_dir_path(__FILE__) . 'inc/submit.php';
 require plugin_dir_path(__FILE__) . 'inc/connect.php';
+require plugin_dir_path(__FILE__) . 'inc/user_settings.php';
 // require plugin_dir_path(__FILE__) . 'inc/user-settings.php';
 
 /* 

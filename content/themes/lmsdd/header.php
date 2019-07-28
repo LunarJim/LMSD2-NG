@@ -12,43 +12,11 @@
   
 <?php wp_head(); ?>
 
-<?php if (isset($_POST['cursor']))
-    {
-      $chosenCursor = $_POST['cursor'] ;
-    $_SESSION['user_cursor']='<link rel="stylesheet" href="'.get_theme_file_uri().'/custom-user-css/'.$chosenCursor.'"';
-    echo $_SESSION['user_cursor']; 
-  }
-
-  elseif (isset($_SESSION['user_cursor']) ){
-    echo $_SESSION['user_cursor']; 
-    }
-  
-   else {
-     $_SESSION['user_cursor'] = '<link rel="stylesheet" href="'.get_theme_file_uri().'/custom-user-css/cursor-classic.css"';
-     
-   }
-
-   ?>
+<?php get_user_cursor_type(); ?>
 </head>
 
 
-<body <?php if (isset($_POST['color']))
-    {
-      $chosenColor = $_POST['color'] ;
-    $_SESSION['user_color']='style="'.$chosenColor.'"';
-    echo $_SESSION['user_color']; 
-  }
-  
-   elseif (isset($_SESSION['user_color']) ){
-   echo $_SESSION['user_color']; 
-   }
-
-   else {
-     $_SESSION['user_color'] = 'style="background-image:
-     radial-gradient(circle at top right,#C7CDEA,#DFDFDF)';
-   }
-  
-   ?> >
+<body <?php get_user_background_color(); ?> >
   <header class="container-fluid p-0 fixed-top shadow">
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand logo" href="<?= get_home_url() ?>">
