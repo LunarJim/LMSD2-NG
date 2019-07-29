@@ -36,7 +36,11 @@ Template Post Type: page
           <!-- formulaire de soumission de citation -->
         
           <form action="" method="post" id="submit-form">
+
+
           <div class="" id="errors-submit" role="alert"></div>
+
+
               <div class="form-group">
                 <label for="email" class="">Email</label>
                 <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" value="<?php echo $current_user->user_email ?>" required>
@@ -48,8 +52,8 @@ Template Post Type: page
               </div>
               <div class="form-group">
                   <label for="exampleFormControlTextarea1" class="">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>
-                  <textarea class="form-control field-input" id="cptContent" rows="3" name="cptContent" required></textarea>
-                </div>
+                  <textarea class="form-control field-input" id="cptContent" rows="3" name="cptContent"></textarea>
+              </div>
               <button type="submit" class="btn btn-primary mb-2">Go !</button>
             </form>
       </div>
@@ -61,22 +65,20 @@ Template Post Type: page
 <script src="<?= get_theme_file_uri('submit.js')?>"></script>
 
 <script>
-<?php
+
 
 // Si j'ai un message à afficher...
-if (!empty($_SESSION['message-submit'])) {
+ <?php if (!empty($_SESSION['message-submit'])) {
 
     // Alors je l'affiche
     echo 'app.errorsMsg.push("'.$_SESSION['message-submit'].'");';
 
     // PUIS, comme il vient d'être affiché, je le supprime
-    $_SESSION['message'] = [];
+    $_SESSION['message-submit'] = [];
 
     // ... ainsi mon message ne sera plus affiché
 }
 
-?>
-
-// script js création de compte 
+ ?> 
 
 </script>

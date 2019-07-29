@@ -13,7 +13,6 @@ require plugin_dir_path(__FILE__) . 'inc/quote_cpt.php';
 require plugin_dir_path(__FILE__) . 'inc/submit.php';
 require plugin_dir_path(__FILE__) . 'inc/connect.php';
 require plugin_dir_path(__FILE__) . 'inc/user_settings.php';
-// require plugin_dir_path(__FILE__) . 'inc/user-settings.php';
 
 /* 
 require plugin_dir_path(__FILE__) . 'inc/roles.php';
@@ -61,7 +60,7 @@ function author_custom_post_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'author_custom_post_types' );
 
- function register_my_session()
+ /*function register_my_session()
 {
   if( !session_id() )
   {
@@ -69,4 +68,4 @@ add_filter( 'pre_get_posts', 'author_custom_post_types' );
   }
 }
 
-add_action('init', 'register_my_session');
+add_action('init', 'register_my_session', 1); */

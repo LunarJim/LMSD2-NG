@@ -7,9 +7,8 @@ function get_user_background_color() {
       $chosenColor = $_POST['color'] ;
     $_SESSION['user_color']='style="'.$chosenColor.'"';
     echo $_SESSION['user_color'];
-
     $_POST['color'] = '';
-  }
+    }
   
    elseif (isset($_SESSION['user_color']) ){
    echo $_SESSION['user_color']; 

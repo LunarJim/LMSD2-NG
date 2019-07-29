@@ -44,7 +44,8 @@ class Quote_cpt
                 'thumbnail',
                 'custom-fields',
                 'revisions',
-                'excerpt'
+                'excerpt',
+                'title'
             ],
             'hierarchical'          => false,
             'public'                => true,

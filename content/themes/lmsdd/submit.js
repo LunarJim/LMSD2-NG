@@ -17,9 +17,6 @@ var app = {
         // Je cible mon element "form"
         app.elements.submitForm = document.getElementById('submit-form');
   
-        // Je cible mes inputs
-        app.elements.fields = document.querySelectorAll('.field-input');
-  
         // J'execute la méthode qui va déployer les addEventListener sur mes elements
         app.createListeners();
   
@@ -31,27 +28,9 @@ var app = {
     createListeners: function() {
   
         // Sur mon formulaire, à la soumission, je vérifierai mes champs
-        app.elements.submitForm.addEventListener('submit-form', app.handleSubmitForm);
+        app.elements.submitForm.addEventListener('submit', app.handleSubmitForm);
   
         // Je vais boucler sur mon tableau de fields
-        for (var index in app.elements.fields) {
-            // index est la variable qui va contenir l'index de mes champs
-            // 0, 1, ...
-  
-            // Je créé une variable field et je lui assigne l'element actuellement parcouru dans ma boucle
-            var field = app.elements.fields[index];
-  
-            // Comme je fais un for ... in sur mon tableau de type "node-list"
-            // (fourni par mon querySelectorAll)
-            // je vais avoir également ma clé "length" de parcourue
-            // du coup je vérifie que mon field est bien un objet avant de lui ajouter l'écouteur
-            if (typeof field === 'object') {
-  
-                // Je peux ainsi ajouter mon écouteur sur tous les elements ayant la classe "field-input"
-                // ceux-ci ayant été "stockés" dans un tableau
-                field.addEventListener('blur', app.handleFieldBlur);
-            }
-        }
   
     },
   
@@ -61,19 +40,11 @@ var app = {
   
   
         // Je nettoie les messages d'erreurs
-        app.errorsMsg = [];
+            app.errorsMsg = [];
   
         // Je viens boucler autant de fois que j'ai d'éléments dans mon
         // tableau de champs input "fields".
-        // La clé length contient le nombre d'elements dans mon tableau "fields"
-        for (var index = 0; index < app.elements.fields.length; index++) {
-  
-            var field = app.elements.fields[index];
-  
-            // On vérifie tous nos champs
-            app.checkField(field);
-        }
-  
+        // La clé length contient le nombre d'elements dans mon tableau "fields"  
         // Si on a des messages d'erreurs à afficher...
         if (app.errorsMsg.length > 0) {
   
@@ -86,29 +57,6 @@ var app = {
             app.displayErrors();
         }
   
-    },
-  
-  
-    checkField: function(field) {
-  
-        // Supprime les classes sur mes éléments si elles existent
-        field.classList.remove('invalid');
-        field.classList.remove('valid');
-  
-        // Si le champ n'est pas correctement renseigné
-        if (field.value.length < 40) {
-  
-            // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
-            app.errorsMsg.push('Es-tu sûr(e) de ta citation ? Elle fait moins de 40 caractères là !');
-  
-            // J'ajoute une classe d'erreur
-            field.classList.add('invalid');
-  
-        } else {
-  
-            // J'ajoute une classe "valid"
-            field.classList.add('valid');
-        }
     },
   
     displayErrors: function() {
@@ -147,7 +95,7 @@ var app = {
   
     
         
-    };
+};
   
   // Je prends mon document et je lui ajoute un écouteur d'évenement
   // ainsi lorsque le document aura fini de construire le DOM
