@@ -8,7 +8,6 @@ Template Post Type: page
 
 
 <div class="container main">
-    <!-- <div class="row profile main ">     -->
         <div class="col-sm-12  pb-3">
             <form action="" method="post">
                 <p>Choisir ma couleur de fond :</p>
@@ -26,7 +25,7 @@ Template Post Type: page
                 </div>
                 <div class="custom-control custom-radio">
                     <input type="radio" id="customRadio4" name="color" value="background-image:
-                    radial-gradient(circle at top right,#C7CDEA,#DFDFDF); " class="custom-control-input" checked>
+                    radial-gradient(circle at top right,#C7CDEA,#DFDFDF); " class="custom-control-input">
                     <label class="custom-control-label" for="customRadio4">défaut : magnifique dégradé</label>
                 </div>
                 <button type="submit" name="color-submit" class="btn btn-primary mt-2">Enregistrer la couleur</button>
@@ -45,7 +44,7 @@ Template Post Type: page
                     <label class="custom-control-label" for="customRadio6">Sniper</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio7" name="cursor" value="cursor-classic.css" class="custom-control-input" checked>
+                    <input type="radio" id="customRadio7" name="cursor" value="cursor-classic.css" class="custom-control-input">
                     <label class="custom-control-label" for="customRadio7">Défaut : curseur</label>
                 </div>
                 <button type="submit" name="color-submit" class="btn btn-primary mt-2">Enregistrer mon curseur</button>
@@ -53,28 +52,28 @@ Template Post Type: page
         </div>
 
         <div class="col-sm-12  pb-3">
-        <form action="">
-            <p>M'abonner à la newsletter ?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="NL_1" checked>
-                <label class="form-check-label" for="exampleRadios1">
-                Oui
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="NL_0">
-                <label class="form-check-label" for="exampleRadios2">
-                Non
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary mt-2">Valider mon choix</button>
+            <form action="">
+                <p>M'abonner à la newsletter ?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="NL_1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        Oui
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="NL_0">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Non
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Valider mon choix</button>
             </form> 
         </div>
         <div class="col-sm-12 bg-white pt-3 pb-3 text-center ">
-            <a class="" href="<?=wp_lostpassword_url();?>">mot de passe oublié ?
+            <a class="" href="<?=wp_lostpassword_url();?>">
+                mot de passe oublié ?
             </a>
         </div>
-<!--    </div>    -->
 </div>
 
 

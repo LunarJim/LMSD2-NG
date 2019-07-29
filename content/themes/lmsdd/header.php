@@ -112,12 +112,20 @@
             <?php $current_user = wp_get_current_user(); ?>
             
             <div class="dropdown">
-              <button class="btn btn btn-outline-dark dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Hello <?= $current_user->display_name ?> !
+              <button class="btn btn btn-outline-dark dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hello <?= $current_user->nickname ?> !
               </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <a href="<?= get_page_link(81);?>"> <button class="dropdown-item" type="button">Mon compte</button></a>
-                  <a href="<?= wp_logout_url(get_home_url());?>"> <button class="dropdown-item" type="button">Déconnexion</button></a>
+                  <a href="<?= get_page_link(81);?>">
+                    <button class="dropdown-item" type="button">
+                      Mon compte
+                    </button>
+                  </a>
+                  <a href="<?= wp_logout_url(get_home_url());?>"> 
+                    <button class="dropdown-item" type="button">
+                      Déconnexion
+                    </button>
+                  </a>
                 </div>
             </div>
             <?php else: ?>

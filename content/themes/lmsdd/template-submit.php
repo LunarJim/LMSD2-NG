@@ -47,8 +47,8 @@ Template Post Type: page
                 <small id="emailHelp" class="form-text text-muted"></small>
               </div>
               <div class="form-group">
-                <label for="Pseudo" class="">Pseudo</label>
-                <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="author" value="<?php echo $current_user->user_login ?>" required>
+                <label for="pseudo" class="">Pseudo</label>
+                <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="author" value="<?php echo $current_user->nickname ?>" required>
               </div>
               <div class="form-group">
                   <label for="exampleFormControlTextarea1" class="">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>

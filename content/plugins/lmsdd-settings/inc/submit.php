@@ -49,7 +49,7 @@ function submit_post() {
  
     }
  
- else if ((isset($_POST['cptContent'])) &&  $current_user->exists()==0)  {
+    elseif ((isset($_POST['cptContent'])) &&  $current_user->exists()==0)  {
 
     $cptContent='';
 
