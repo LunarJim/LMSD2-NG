@@ -38,7 +38,7 @@ function submit_post() {
  
             $cpt_id = wp_insert_post($my_cptpost_args);
 
-            wp_redirect(get_home_url());
+            wp_redirect(get_permalink(150));
             exit;
  
         }
@@ -79,10 +79,8 @@ function submit_post() {
             // wp_set_object_terms( $cpt_id, $category_name, 'categorie' );
  
             // update_field(pseudo_not_connected,$_POST['author'],$cpt_id);
-   
-            $home = get_home_url();
  
-            wp_redirect(get_home_url());
+            wp_redirect(get_permalink(150));
             exit;
         }
 
