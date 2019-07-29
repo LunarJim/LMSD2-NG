@@ -8,15 +8,18 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   
-
   
 <?php wp_head(); ?>
 
-<?php get_user_cursor_type(); ?>
+<?php
+
+
+  
+  get_user_cursor_type(); ?>
 </head>
 
 
-<body <?php get_user_background_color(); ?> >
+<body <?php get_user_background_color(); ?>>
   <header class="container-fluid p-0 fixed-top shadow">
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand logo" href="<?= get_home_url() ?>">

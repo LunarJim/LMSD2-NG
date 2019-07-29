@@ -96,10 +96,10 @@ var app = {
         field.classList.remove('valid');
   
         // Si le champ n'est pas correctement renseigné
-        if (field.value.length < 5) {
+        if (field.value.length < 40) {
   
             // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
-            app.errorsMsg.push('Le champ '+ field.placeholder +' doit contenir au moins 5 caractères');
+            app.errorsMsg.push('Es-tu sûr(e) de ta citation ? Elle fait moins de 40 caractères là !');
   
             // J'ajoute une classe d'erreur
             field.classList.add('invalid');

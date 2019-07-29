@@ -6,7 +6,9 @@ function get_user_background_color() {
     {
       $chosenColor = $_POST['color'] ;
     $_SESSION['user_color']='style="'.$chosenColor.'"';
-    echo $_SESSION['user_color']; 
+    echo $_SESSION['user_color'];
+
+    $_POST['color'] = '';
   }
   
    elseif (isset($_SESSION['user_color']) ){
@@ -14,8 +16,8 @@ function get_user_background_color() {
    }
 
    else {
-     $_SESSION['user_color'] = 'style="background-image:
-     radial-gradient(circle at top right,#C7CDEA,#DFDFDF)';
+    $_SESSION['user_color'] = 'style="background:
+     radial-gradient(circle at top right,#C7CDEA,#DFDFDF)"';
      echo $_SESSION['user_color'];
    }
   

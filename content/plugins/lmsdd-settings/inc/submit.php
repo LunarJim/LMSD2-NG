@@ -8,6 +8,7 @@ function submit_post() {
  //déjà appelé dans le header
  
  if ((isset($_POST['cptContent'])) &&  $current_user->exists())  {
+
  
  // create post object with the form values
  

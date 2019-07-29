@@ -61,7 +61,7 @@ function author_custom_post_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'author_custom_post_types' );
 
-function register_my_session()
+ function register_my_session()
 {
   if( !session_id() )
   {
