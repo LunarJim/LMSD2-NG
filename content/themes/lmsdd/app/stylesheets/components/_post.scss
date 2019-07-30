@@ -1,22 +1,18 @@
+.posts__content {
+  margin-left: 1em;
+  margin-right: 1em;
+  background-color: $white;
+  font-family: 'Pangolin', cursive;
+  height: 100%;
+}
 
-
-  .posts__content {
-    
-    margin-left: 1em;
-    margin-right: 1em;
-    background-color: $white;
-    font-family: 'Pangolin', cursive;
-    height: 100%;
-  }
-  
-  .posts__sticker {
-    min-height: 15em;
-    margin-bottom: 2em;
-    margin-top: 1em;
-  }
+.posts__sticker {
+  min-height: 15em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
 
 .author {
-  
   color: inherit;
   text-decoration: none;
 }
@@ -24,6 +20,8 @@
 .quote {
   min-height: 7em;
   padding-top: 5px;
-}
 
-  
+  p {
+    padding-top: 0.4em;
+  }
+}
