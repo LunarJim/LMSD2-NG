@@ -36,25 +36,5 @@ Template Post Type: page
     </div>
   </div>
 
-  <?php 
-  
-
-  if(isset($_POST["contact_message"]) && ($_POST["contact_email"])) 
-  {
-      $contact_content = $_POST["contact_message"];
-      $my_mail='jim.deghaye@gmail.com';
-      $headers = array('Content-Type: text/html; charset=UTF-8');
-      $wp_mail_result = wp_mail($my_mail, 'nouveau message du formulaire de contact',$contact_content,$headers);
-
-      $thksPage = 'http://localhost/LMSD2-NG/content/themes/lmsdd/template-merci.php';
-
-      wp_redirect($thksPage);
-  
-  }
-    
-    ?>
-
-  
-  
 
   <?php get_footer() ?>
