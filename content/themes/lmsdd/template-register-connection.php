@@ -8,7 +8,7 @@ Template Post Type: page
 
 <?php get_header(); ?>
 
-  <div class="main-contact container bg-white p-4">
+  <div class="main-contact container bg-white p-4 rounded">
     <div class="row">
       <div class="col-md-6 sign-in-form border-right">
         <h4 class="mb-4">Déjà un compte ?</h4>
