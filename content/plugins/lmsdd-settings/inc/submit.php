@@ -38,7 +38,7 @@ function submit_post() {
  
             $cpt_id = wp_insert_post($my_cptpost_args);
 
-            if ($_POST['publishing-alert']=='on') {
+            if (isset($_POST['publishing-alert']) && ($_POST['publishing-alert']=='on')) {
                 update_field('quote_publishing_notification', 1, $cpt_id);
             }
 

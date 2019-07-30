@@ -14,6 +14,7 @@ require plugin_dir_path(__FILE__) . 'inc/submit.php';
 require plugin_dir_path(__FILE__) . 'inc/connect.php';
 require plugin_dir_path(__FILE__) . 'inc/user_settings.php';
 require plugin_dir_path(__FILE__) . 'inc/contact.php';
+require plugin_dir_path(__FILE__) . 'inc/publishing-notification.php';
 
 /* 
 require plugin_dir_path(__FILE__) . 'inc/roles.php';
