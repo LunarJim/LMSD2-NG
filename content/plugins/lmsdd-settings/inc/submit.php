@@ -38,6 +38,10 @@ function submit_post() {
  
             $cpt_id = wp_insert_post($my_cptpost_args);
 
+            if ($_POST['publishing-alert']=='on') {
+                update_field('quote_publishing_notification', 1, $cpt_id);
+            }
+
             wp_redirect(get_permalink(150));
             exit;
  
@@ -75,6 +79,11 @@ function submit_post() {
 
              update_field('not_connected_user_email', $_POST['email'], $cpt_id);
              update_field('not_connected_user_name', $_POST['author'], $cpt_id);
+
+             if (isset($_POST['publishing-alert']) && ($_POST['publishing-alert']=='on')) {
+                update_field('quote_publishing_notification', 1, $cpt_id);
+            }
+
    
             // wp_set_object_terms( $cpt_id, $category_name, 'categorie' );
  

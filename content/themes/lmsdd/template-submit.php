@@ -5,17 +5,17 @@ Template Post Type: page
  */
 ?>
 
-<?php get_header(); ?>
-   
+<?php get_header();?>
+
 
   <div class="main-contact container">
     <div class="row">
       <div class="col-md-6 submit-post mx-auto">
-        
+
             <p>
                 <h4 class="text-center">
-                  A toi de jouer : 
-                </h4> 
+                  A toi de jouer :
+                </h4>
 
                 <!-- mode d'emploi avant publication -->
 
@@ -27,18 +27,18 @@ Template Post Type: page
                 <div class="card card-body">
                   <ul class="list-group">
                     <li class="list-group-item">Les citations sont toutes modérées : tâchons de rester poli ! Du fait de la modération, les citations ne sont pas publiées dès soumission mais sous 48 heures</li>
-                    <li class="list-group-item">La publication est possible sans être connecté en tant que membre. Cependant, nous vous recommandons de <a href="<?= get_page_link(11); ?>">créer un compte</a>  afin de pouvoir retrouver vos propres citations et de disposer de tous nos services perso miam miam !</li>
+                    <li class="list-group-item">La publication est possible sans être connecté en tant que membre. Cependant, nous vous recommandons de <a href="<?=get_page_link(11);?>">créer un compte</a>  afin de pouvoir retrouver vos propres citations et de disposer de tous nos services perso miam miam !</li>
                     <li class="list-group-item">Votre citation ne doit pas dépasser 120 caractères et si possible ne pas comporter de fautes (go Bescherelle)</li>
                   </ul>
                 </div>
               </div>
 
           <!-- formulaire de soumission de citation -->
-        
+
           <form action="" method="post" id="submit-form">
 
 
-          <div class="" id="errors-submit" role="alert"></div>
+            <div class="" id="errors-submit" role="alert"></div>
 
 
               <div class="form-group">
@@ -54,15 +54,23 @@ Template Post Type: page
                   <label for="exampleFormControlTextarea1" class="">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>
                   <textarea class="form-control field-input" id="cptContent" rows="3" name="cptContent"></textarea>
               </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" name="publishing-alert">
+                  <label class="form-check-label" for="gridCheck">
+                    M'avertir lors de la publication
+                  </label>
+                 </div>
+              </div>
               <button type="submit" class="btn btn-primary mb-2">Go !</button>
             </form>
       </div>
     </div>
   </div>
 
-<?php get_footer(); ?>
+<?php get_footer();?>
 
-<script src="<?= get_theme_file_uri('submit.js')?>"></script>
+<script src="<?=get_theme_file_uri('submit.js')?>"></script>
 
 <script>
 
@@ -71,7 +79,7 @@ Template Post Type: page
  <?php if (!empty($_SESSION['message-submit'])) {
 
     // Alors je l'affiche
-    echo 'app.errorsMsg.push("'.$_SESSION['message-submit'].'");';
+    echo 'app.errorsMsg.push("' . $_SESSION['message-submit'] . '");';
 
     // PUIS, comme il vient d'être affiché, je le supprime
     $_SESSION['message-submit'] = [];
@@ -79,6 +87,6 @@ Template Post Type: page
     // ... ainsi mon message ne sera plus affiché
 }
 
- ?> 
+?>
 
 </script>
