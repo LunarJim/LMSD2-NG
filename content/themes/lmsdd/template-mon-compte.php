@@ -53,17 +53,11 @@ Template Post Type: page
 
         <div class="col-sm-12  pb-3">
             <form action="">
-                <p>M'abonner à la newsletter ?</p>
+                <p>Recevoir des alertes ?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="NL_1">
-                    <label class="form-check-label" for="exampleRadios1">
+                    <input class="form-check-input" type="checkbox" name="mc4wp-subscribe" id="exampleRadios1" value="1">
+                    <label class="form-check-label" for="">
                         Oui
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="NL_0">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Non
                     </label>
                 </div>
                 <button type="submit" class="btn btn-primary mt-2">Valider mon choix</button>
