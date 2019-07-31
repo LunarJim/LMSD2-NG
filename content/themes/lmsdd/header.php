@@ -14,8 +14,6 @@
 
 <?php
 
-
-  
   get_user_cursor_type(); ?>
 </head>
 
