@@ -27,6 +27,8 @@ function submit_post() {
             $my_cptpost_args = array(
  
                 'post_content' => $_POST['cptContent'],
+
+                'post_title'   => $_POST['cptContent'],
  
                 'post_status' => 'pending',
  
@@ -66,6 +68,8 @@ function submit_post() {
             $my_cptpost_args = array(
    
             'post_content' => $_POST['cptContent'],
+
+            'post_title'   => $_POST['cptContent'],
    
             'post_status' => 'pending',
    
