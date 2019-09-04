@@ -17,14 +17,15 @@ Template Post Type: page
 
         <div class="" id="errors" role="alert">
 
-        </div id="login">
+        </div>
+        
+        
           <form action="" method="post" id="login-form">
               <div class="form-group field">
                 <label for="login_has_account">login</label>
                 <input type="text" class="form-control field-input" id="field-username" name="userName" aria-describedby="" placeholder="login" required>
               </div>
               <div class="form-group field">
-              <span id="reveal">👁</span>
                 <label for="InputPassword_has_account">Mot de passe</label>
                 <input type="password" class="form-control field-input" id="field-password" name="passwordHasAccount" placeholder="mot de passe" required>
               </div>
@@ -36,6 +37,7 @@ Template Post Type: page
                 <label class="form-check-label" for="checkBox_has_account">Se souvenir de moi</label>
               </div>
               <button type="submit" id="login-submit" class="btn btn-primary">Connexion</button>
+              <?php wp_nonce_field( 'login_nonce_action', 'login_nonce_field' ); ?>
             </form>
             <br>
             <div><a href="<?=wp_lostpassword_url();?>">mot de passe oublié ?</a></div>
@@ -72,6 +74,7 @@ Template Post Type: page
                 <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
               </div>
               <button type="submit" class="btn btn-primary">Créer un compte</button>
+              <?php wp_nonce_field( 'register_nonce_action', 'register_nonce_field' ); ?>
             </form>
 
         </div>
@@ -85,16 +88,13 @@ Template Post Type: page
 <script>
 <?php
 
-// Si j'ai un message à afficher...
+// Affichage du message en d'erreur de connexion / vérification des champs
 if (!empty($_SESSION['message'])) {
 
-    // Alors je l'affiche
     echo 'app.errorsMsg.push("' . $_SESSION['message'] . '");';
 
-    // PUIS, comme il vient d'être affiché, je le supprime
     $_SESSION['message'] = [];
 
-    // ... ainsi mon message ne sera plus affiché
 }
 
 ?>

@@ -20,9 +20,6 @@ var app = {
         // Je cible mes inputs
         app.elements.fields = document.querySelectorAll('.field-input');
   
-        // Je cible l'oeil
-        app.elements.reveal = document.getElementById('reveal');
-  
         // J'execute la méthode qui va déployer les addEventListener sur mes elements
         app.createListeners();
   
@@ -43,20 +40,9 @@ var app = {
   
             // Je créé une variable field et je lui assigne l'element actuellement parcouru dans ma boucle
             var field = app.elements.fields[index];
-  
-            // Comme je fais un for ... in sur mon tableau de type "node-list"
-            // (fourni par mon querySelectorAll)
-            // je vais avoir également ma clé "length" de parcourue
-            // du coup je vérifie que mon field est bien un objet avant de lui ajouter l'écouteur
-            if (typeof field === 'object') {
-  
-                // Je peux ainsi ajouter mon écouteur sur tous les elements ayant la classe "field-input"
-                // ceux-ci ayant été "stockés" dans un tableau
-                field.addEventListener('blur', app.handleFieldBlur);
-            }
+
         }
   
-        app.elements.reveal.addEventListener('click', app.handleRevealClick);
     },
   
     // Fonction executée par mon addEventListener sur mon form a l'evenement submit
@@ -92,35 +78,16 @@ var app = {
   
     },
   
-    // Fonction executée par mon addEventListener sur mes fields a l'evenement blur
-    handleFieldBlur: function(eventBlur){
-  
-        // Je récupere avec mon target l'element qui a déclenché l'evenement
-        var field = eventBlur.target;
-  
-        app.checkField(field);
-    },
-  
     checkField: function(field) {
-  
-        // Supprime les classes sur mes éléments si elles existent
-        field.classList.remove('invalid');
-        field.classList.remove('valid');
   
         // Si le champ n'est pas correctement renseigné
         if (field.value.length < 5) {
   
             // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
             app.errorsMsg.push('Le champ '+ field.placeholder +' doit contenir au moins 5 caractères');
+
   
-            // J'ajoute une classe d'erreur
-            field.classList.add('invalid');
-  
-        } else {
-  
-            // J'ajoute une classe "valid"
-            field.classList.add('valid');
-        }
+        } 
     },
   
     displayErrors: function() {
@@ -155,25 +122,6 @@ var app = {
         // Je place l'element dans le DOM (et donc dans la page)
         // appendChild me permet de dire: "je t'ajouter un nouvel element enfant"
         app.elements.errorsArea.appendChild(errorBox);
-    },
-  
-    handleRevealClick: function() {
-  
-        // je selectionne le champ password
-        var fieldPassword = document.getElementById('field-password');
-  
-        // Si il a un type "password"
-        if (fieldPassword.type === 'password') {
-  
-            // je le change en text pour l'afficher
-            fieldPassword.type = 'text';
-  
-        // Sinon
-        } else {
-  
-            // je le remet en password
-            fieldPassword.type = 'password';
-        }
     }
   
   };
