@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.2.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-07-13 16:56:13+0000\n"
+"PO-Revision-Date: 2019-08-06 06:39:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6112,7 +6112,7 @@ msgstr[1] "%s pages"
 #: wp-admin/includes/dashboard.php:272
 msgid "%s Post"
 msgid_plural "%s Posts"
-msgstr[0] "%s articles"
+msgstr[0] "%s article"
 msgstr[1] "%s articles"
 
 #: wp-admin/includes/dashboard.php:47

@@ -63,7 +63,7 @@ Template Post Type: page
                 </div>
                 <div class="custom-control custom-radio">
                     <input type="radio" id="cursor-default" name="cursor" value="cursor-classic.css" class="custom-control-input">
-                    <label class="custom-control-label" for="ccursor-default">Défaut : curseur</label>
+                    <label class="custom-control-label" for="cursor-default">Défaut : curseur</label>
                 </div>
                 <button type="submit" name="cursor-submit" class="btn btn-primary mt-2">Enregistrer mon curseur</button>
             </form>

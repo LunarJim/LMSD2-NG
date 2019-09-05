@@ -52,7 +52,7 @@ Template Post Type: page
               </div>
               <div class="form-group">
                   <label for="exampleFormControlTextarea1" class="">Ta citation (doit commencer par "ceux qui" ou "celles qui")</label>
-                  <textarea class="form-control field-input" id="cptContent" rows="3" name="cptContent"></textarea>
+                  <textarea class="form-control field-input" id="cptContent" rows="3" name="quoteContent"></textarea>
               </div>
               <div class="form-group">
                 <div class="form-check">

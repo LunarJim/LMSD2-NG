@@ -1,7 +1,7 @@
 <?php
 
 
-function notifyauthor($post_id) {
+function notifyAuthor($post_id) {
  
  $post = get_post($post_id);
  $author = get_userdata($post->post_author);
@@ -16,7 +16,7 @@ function notifyauthor($post_id) {
 
  if (($sendNotificationStatus==1) && isset($emailIfUserNotConnected)) {
   
-       $message = "
+    $message = "
        Bonjour ".$nameIfUserNotConnected.",
         
        Ta citation vient d'être publiée.
@@ -30,7 +30,8 @@ function notifyauthor($post_id) {
  }
 
  elseif (($sendNotificationStatus==1) && !isset($emailIfUserNotConnected)) {
-     $message = "
+
+    $message = "
         Bonjour ".$author->display_name.",
      
         Ta citation vient d'être publiée.
@@ -39,10 +40,9 @@ function notifyauthor($post_id) {
      
         Merci";
  
-     
- wp_mail($author->user_email, $subject, $message);
+    wp_mail($author->user_email, $subject, $message);
  }
 
 }
 
- add_action('publish_quote', 'notifyauthor');
+ add_action('publish_quote', 'notifyAuthor');
