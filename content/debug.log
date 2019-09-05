@@ -47,3 +47,23 @@
 [05-Sep-2019 10:22:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/LMSD2-NG/wp/wp-includes/update.php:160) in /var/www/html/LMSD2-NG/wp/wp-admin/includes/misc.php on line 1196
 [05-Sep-2019 13:55:22 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/lmsdd-settings.php on line 69
 [05-Sep-2019 13:55:22 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/lmsdd-settings.php:69) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/lmsdd-settings.php on line 69
+[05-Sep-2019 14:09:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function update_field() in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/submit.php:62
+Stack trace:
+#0 /var/www/html/LMSD2-NG/wp/wp-includes/class-wp-hook.php(286): submit_post('')
+#1 /var/www/html/LMSD2-NG/wp/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/LMSD2-NG/wp/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /var/www/html/LMSD2-NG/wp/wp-settings.php(546): do_action('wp_loaded')
+#4 /var/www/html/LMSD2-NG/wp-config.php(143): require_once('/var/www/html/L...')
+#5 /var/www/html/LMSD2-NG/wp/wp-load.php(42): require_once('/var/www/html/L...')
+#6 /var/www/html/LMSD2-NG/wp/wp-blog-header.php(13): require_once('/var/www/html/L...')
+#7 /var/www/html/LMSD2-NG/index.php(17): require('/var/www/html/L...')
+#8 {main}
+  thrown in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/submit.php on line 62
+[05-Sep-2019 14:12:35 UTC] PHP Warning:  Use of undefined constant quote_publishing_notification - assumed 'quote_publishing_notification' (this will throw an Error in a future version of PHP) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/publishing-notification.php on line 10
+[05-Sep-2019 14:12:35 UTC] PHP Warning:  Use of undefined constant quote_publishing_notification - assumed 'quote_publishing_notification' (this will throw an Error in a future version of PHP) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/publishing-notification.php on line 10
+[05-Sep-2019 14:21:08 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/lmsdd-settings.php on line 69
+[05-Sep-2019 14:23:10 UTC] PHP Warning:  Use of undefined constant quote_publishing_notification - assumed 'quote_publishing_notification' (this will throw an Error in a future version of PHP) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/publishing-notification.php on line 10
+[05-Sep-2019 14:23:10 UTC] PHP Warning:  Use of undefined constant quote_publishing_notification - assumed 'quote_publishing_notification' (this will throw an Error in a future version of PHP) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/publishing-notification.php on line 10
+[05-Sep-2019 14:26:28 UTC] PHP Warning:  Use of undefined constant quote_publishing_notification - assumed 'quote_publishing_notification' (this will throw an Error in a future version of PHP) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/publishing-notification.php on line 10
+[05-Sep-2019 14:26:29 UTC] PHP Warning:  Use of undefined constant quote_publishing_notification - assumed 'quote_publishing_notification' (this will throw an Error in a future version of PHP) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/inc/publishing-notification.php on line 10
+[05-Sep-2019 15:07:11 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/LMSD2-NG/content/plugins/lmsdd-settings/lmsdd-settings.php on line 69

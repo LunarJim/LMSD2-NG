@@ -42,9 +42,14 @@ Template Post Type: page
 
 
               <div class="form-group">
-                <label for="email" class="">Email</label>
-                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" value="<?php echo $current_user->user_email ?>" required>
-                <small id="emailHelp" class="form-text text-muted"></small>
+                <label for="email" class="">
+                  Email
+                </label>
+                <input type="email" class="form-control" 
+                  name="email" id="email" 
+                  aria-describedby="emailHelp" 
+                  placeholder="Email" 
+                  value="<?php echo $current_user->user_email ?>" required>
               </div>
               <div class="form-group">
                 <label for="pseudo" class="">Pseudo</label>

@@ -12,7 +12,7 @@ function submit_post() {
         $quoteContent = $_POST['quoteContent'];
         $quoteContentLenght = strlen($quoteContent);
 
-        if ($quoteContentLenght > 40) {
+        if ($quoteContentLenght > 30 && $quoteContentLenght < 130) {
         
             $user_id = get_current_user_id();
             $newQuote = array(
@@ -35,7 +35,7 @@ function submit_post() {
         }
 
         else {
-            $_SESSION['message-submit'] = 'Ta citation me paraît courte! Peux-tu la vérifier ?';
+            $_SESSION['message-submit'] = 'Un souci? Ta citation doit être comprise entre 30 et 130 caractères.';
         }
     }
  
@@ -45,7 +45,7 @@ function submit_post() {
     $quoteContent = $_POST['quoteContent'];
     $quoteContentLenght = strlen($quoteContent);
 
-        if ($quoteContentLenght > 40) {
+        if ($quoteContentLenght > 30 && $quoteContentLenght < 130) {
 
             $newQuote = array(
    
@@ -71,7 +71,7 @@ function submit_post() {
         }
 
         else {
-            $_SESSION['message-submit'] = 'Ta citation me paraît courte! Peux-tu la vérifier ?';
+            $_SESSION['message-submit'] = 'Un souci? Ta citation doit être comprise entre 30 et 130 caractères.';
         }
  }
 
