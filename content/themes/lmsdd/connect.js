@@ -81,10 +81,10 @@ var app = {
     checkField: function(field) {
   
         // Si le champ n'est pas correctement renseigné
-        if (field.value.length < 5) {
+        if (field.value.length < 6) {
   
             // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
-            app.errorsMsg.push('Le champ '+ field.placeholder +' doit contenir au moins 5 caractères');
+            app.errorsMsg.push('Le champ '+ field.placeholder +' doit contenir au moins 6 caractères');
 
   
         } 

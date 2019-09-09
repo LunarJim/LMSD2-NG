@@ -7,15 +7,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
   <?php wp_head(); ?>
 
   <?php get_user_cursor_type(); ?>
 
 </head>
 
-
 <body <?php get_user_background_color(); ?>>
+
   <header class="container-fluid p-0 fixed-top shadow">
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand logo" href="<?= get_home_url() ?>">

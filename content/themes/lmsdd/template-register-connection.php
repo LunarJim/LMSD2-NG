@@ -18,8 +18,6 @@ Template Post Type: page
         <div class="" id="errors" role="alert">
 
         </div>
-        
-        
           <form action="" method="post" id="login-form">
               <div class="form-group field">
                 <label for="login_has_account">login</label>
@@ -54,6 +52,7 @@ Template Post Type: page
               <div class="form-group">
                   <label for="pseudo">Pseudo</label>
                   <input type="text" class="form-control field-input-na" id="pseudo_no_account" aria-describedby="pseudoHelp" placeholder="Pseudo" name="pseudoNoAccount" required>
+                  <small id="emailHelp" class="form-text text-muted">Pseudo d'au moins 6 caractères sans espaces</small>
                 </div>
               <div class="form-group">
                 <label for="email_no_account">Email</label>
@@ -67,7 +66,7 @@ Template Post Type: page
               </div>
               <div class="form-group">
                   <label for="password2_no_account">Mot de passe (vérification)</label>
-                  <input type="password" class="form-control field-input-na" id="password2_no_account" placeholder="Mot de passe" name="passwordCheckNoAccount" required>
+                  <input type="password" class="form-control field-input-na" id="password2_no_account" placeholder="vérification du mot de passe" name="passwordCheckNoAccount" required>
                 </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="rememberMe-na" name="rememberMeNoAccount" value="rememberMeNoAccount">

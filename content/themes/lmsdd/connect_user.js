@@ -20,9 +20,6 @@ var appRegister = {
         // Je cible mes inputs
         appRegister.elementsNa.fields = document.querySelectorAll('.field-input-na');
   
-        // Je cible l'oeil
-        // appRegister.elementsNa.reveal = document.getElementById('reveal-na');
-  
         // J'execute la méthode qui va déployer les addEventListener sur mes elementsNa
         appRegister.createListeners();
   
@@ -92,26 +89,14 @@ var appRegister = {
   
     },
   
-    // Fonction executée par mon addEventListener sur mes fields a l'evenement blur
-    handleFieldBlur: function(eventBlur){
-  
-        // Je récupere avec mon target l'element qui a déclenché l'evenement
-        var field = eventBlur.target;
-  
-        appRegister.checkField(field);
-    },
   
     checkField: function(field) {
   
-        // Supprime les classes sur mes éléments si elles existent
-        field.classList.remove('invalid');
-        field.classList.remove('valid');
-  
         // Si le champ n'est pas correctement renseigné
-        if (field.value.length < 5) {
+        if (field.value.length < 6) {
   
             // J'ajoute mon message d'erreur dans mon tableau de messages d'erreurs
-            appRegister.errorsMsgNa.push('Le champ '+ field.placeholder +' doit contenir au moins 5 caractères');
+            appRegister.errorsMsgNa.push('Le champ '+ field.placeholder +' doit contenir au moins 6 caractères');
   
             // J'ajoute une classe d'erreur
             field.classList.add('invalid');
@@ -155,25 +140,6 @@ var appRegister = {
         // Je place l'element dans le DOM (et donc dans la page)
         // appRegisterendChild me permet de dire: "je t'ajouter un nouvel element enfant"
         appRegister.elementsNa.errorsArea.appendChild(errorBox);
-    },
-  
-    handleRevealClick: function() {
-  
-        // je selectionne le champ password
-        var fieldPassword = document.getElementById('field-password');
-  
-        // Si il a un type "password"
-        if (fieldPassword.type === 'password') {
-  
-            // je le change en text pour l'afficher
-            fieldPassword.type = 'text';
-  
-        // Sinon
-        } else {
-  
-            // je le remet en password
-            fieldPassword.type = 'password';
-        }
     }
   
   };
