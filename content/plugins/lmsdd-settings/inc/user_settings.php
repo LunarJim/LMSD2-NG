@@ -20,6 +20,7 @@ function get_user_background_color() {
    }
 }
 
+
 function get_user_cursor_type() {
 
   if (isset($_POST['cursor']) && is_user_logged_in()) {

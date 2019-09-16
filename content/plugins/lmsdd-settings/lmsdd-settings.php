@@ -45,7 +45,7 @@ function author_custom_post_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'author_custom_post_types' );
 
-/* function start_session()
+function start_session()
 {
   if( !session_id() )
   {
@@ -53,4 +53,4 @@ add_filter( 'pre_get_posts', 'author_custom_post_types' );
   }
 }
 
-add_action('init', 'start_session', 1); */
+add_action('init', 'start_session', 1); 
