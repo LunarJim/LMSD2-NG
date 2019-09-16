@@ -31,6 +31,24 @@ function lmsdd_scripts()
         '1.0.0',
         true
     );
+
+/*    wp_enqueue_script(
+        'lmsdd_like_system_script',
+        get_theme_file_uri('like.js'),
+        [],
+        '1.0.0',
+        true
+    );
+
+    wp_localize_script(
+        'lmsdd_like_system_script',
+        'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+
+
+*/
+
+
 }
 
 add_action('wp_enqueue_scripts', 'lmsdd_scripts');
+

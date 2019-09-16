@@ -2,7 +2,7 @@
 /*
 Plugin Name: lmsdd settings
 Description: Réglages pour le thème le monde se divise en 2: Custom Post Type, Taxonomies, Custom Fields, ...
-Author: JimDeghaye
+Author: Jérémie Deghaye
 Version: 1.0.0
 */
 
@@ -15,32 +15,15 @@ require plugin_dir_path(__FILE__) . 'inc/connect.php';
 require plugin_dir_path(__FILE__) . 'inc/user_settings.php';
 require plugin_dir_path(__FILE__) . 'inc/contact.php';
 require plugin_dir_path(__FILE__) . 'inc/publishing-notification.php';
+require plugin_dir_path(__FILE__) . 'inc/connect_api.php';
 
-/* 
-require plugin_dir_path(__FILE__) . 'inc/roles.php';
-require plugin_dir_path(__FILE__) . 'inc/settings.php';
-require plugin_dir_path(__FILE__) . 'inc/dashboard.php';
-require plugin_dir_path(__FILE__) . 'inc/interface.php';
-require plugin_dir_path(__FILE__) . 'inc/footer.php';
-require plugin_dir_path(__FILE__) . 'inc/login.php';
-require plugin_dir_path(__FILE__) . 'inc/rest_api.php';
-*/
 
-/// CPT QUOTE ///
+
+// CPT QUOTE
 $quote_cpt = new Quote_cpt();
 
 register_activation_hook(__FILE__, [$quote_cpt, 'activation']);
 register_deactivation_hook(__FILE__, [$quote_cpt, 'deactivation']);
-
-
-/// ROLES ///
-/* 
-$role = new oCookingRole();
-
-register_activation_hook(__FILE__, [$role, 'activation']);
-register_deactivation_hook(__FILE__, [$role, 'deactivation']);
-
-*/
 
 add_action('after_setup_theme', 'remove_admin_bar');
  
@@ -62,7 +45,7 @@ function author_custom_post_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'author_custom_post_types' );
 
- function start_session()
+/* function start_session()
 {
   if( !session_id() )
   {
@@ -70,4 +53,4 @@ add_filter( 'pre_get_posts', 'author_custom_post_types' );
   }
 }
 
-add_action('init', 'start_session', 1); 
+add_action('init', 'start_session', 1); */

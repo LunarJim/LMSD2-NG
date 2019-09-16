@@ -3,29 +3,21 @@ exports.files = {
   javascripts: {
     joinTo: {
       'js/app.js': /^app/,
-      'js/vendor.js': /^node_modules/,
+      'js/vendor.js': /^node_modules/
     }
   },
   stylesheets: {
     joinTo: {
       'css/app.css': /^app/,
-      'css/vendor.css': /^node_modules/,
+      'css/vendor.css': /^node_modules/
     }
   }
 };
 
 exports.plugins = {
-  browserSync: {
-    files: ['*']
-  },
   copycat: {
     'fonts': ['node_modules/font-awesome/fonts']
   }
-};
-
-exports.watcher = {
-  usePolling: true,
-  awaitWriteFinish: true
 };
 
 exports.npm = {
@@ -35,8 +27,7 @@ exports.npm = {
   },
   globals: {
     '$': 'jquery',
-    'jQuery': 'jquery',
-    'scrollex': 'jquery.scrollex'
+    'jQuery': 'jquery'
   }
 };
 

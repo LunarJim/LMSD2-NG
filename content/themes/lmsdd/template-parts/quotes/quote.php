@@ -7,7 +7,7 @@
         <div class="quote">
             <?php the_content(); ?>
         </div>
-        <div class=" post__category">
+        <div class="post__category">
 
             <?php // affichage des catégories 
                 $terms = wp_get_post_terms(get_the_ID(),'categorie');
@@ -24,6 +24,23 @@
             <?php endforeach; endif; ?>
         </div>
         <div class="vot_mp2" data-vote_id="<?php the_ID();?>">
+        <button type="button" class="btn btn-danger">
+            <i class="fas fa-heart-broken">
+            </i> 
+            <span class="badge badge-danger score-area count-down" id="down">
+            </span>
+        </button>
+        <button type="button" class="btn btn-success">
+            <i class="fas fa-heart">
+            </i>
+            <span class="badge badge-success score-area count-up" id="up">
+            </span>
+        </button>
+        <button type="button" class="btn btn-light ml-2">
+            <i class="fas fa-temperature-high">
+            </i> <span class="badge badge-warning score-area count-total" id="total">
+            </span>
+        </button>
         </div>
         <div>
             <?php  get_favorites_button(get_the_ID()); ?>
