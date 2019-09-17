@@ -26,8 +26,6 @@ var adminApp = {
     jqxhr.done(function() {
       console.log('quote can be deleted');
 
-      $divToDeleteAfterAjaxCall.fadeOut();
-
       $divToDeleteAfterAjaxCall.remove();
     });
 
