@@ -24,7 +24,7 @@ var adminApp = {
     });
 
     jqxhr.done(function() {
-      console.log('quote can be deleted');
+      console.log('quote deleted');
 
       $divToDeleteAfterAjaxCall.remove();
     });

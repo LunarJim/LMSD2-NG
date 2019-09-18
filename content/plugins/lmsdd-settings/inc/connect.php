@@ -45,7 +45,7 @@ function createNewUser() {
 
         $checkPseudoLenght = str_replace(' ', '',$_POST['pseudoNoAccount']);
 
-        if (strlen($checkPseudoLenght) > 6) {
+        if (strlen($checkPseudoLenght) >= 6) {
             if ($_POST['passwordNoAccount'] === $_POST['passwordCheckNoAccount']) {
                 $create_login = $_POST['pseudoNoAccount'];
                 $create_password = $_POST['passwordNoAccount'];
@@ -73,7 +73,7 @@ function createNewUser() {
                     wp_redirect(get_home_url());
                     exit;
                 } else {
-                    $_SESSION['msg'] = 'Ce compte existe déjà !';
+                    $_SESSION['msg'] = 'Pseudo ou adresse email déjà utilisé(s) !';
                 }
             } else {
                 $_SESSION['msg'] = 'Les 2 mots de passes saisis sont différents !';
