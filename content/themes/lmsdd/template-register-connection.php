@@ -99,26 +99,18 @@ if (!empty($_SESSION['message'])) {
 ?>
 
 // script js création de compte
-
 </script>
 
 <script src="<?=get_theme_file_uri('connect_user.js')?>"></script>
-
 <script>
 <?php
+      if (!empty($_SESSION['msg'])) {
 
-// Si j'ai un message à afficher...
-if (!empty($_SESSION['msg'])) {
+          echo 'appRegister.errorsMsgNa.push("' . $_SESSION['msg'] . '");';
 
-    // Alors je l'affiche
-    echo 'appRegister.errorsMsgNa.push("' . $_SESSION['msg'] . '");';
+          $_SESSION['msg'] = [];
 
-    // PUIS, comme il vient d'être affiché, je le supprime
-    $_SESSION['msg'] = [];
-
-    // ... ainsi mon message ne sera plus affiché
-}
-
+      }
 ?>
 </script>
 
